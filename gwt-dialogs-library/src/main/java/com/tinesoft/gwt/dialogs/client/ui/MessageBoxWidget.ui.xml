@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+ 	xmlns:my='urn:import:com.tinesoft.gwt.dialogs.client.ui'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with
+		type="com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources"
+		field="resources"></ui:with>
+
+	<g:FlowPanel ui:field="pMain">		
+		<g:FlowPanel ui:field="pBackground" addStyleNames="{resources.css.gwtdMessageBoxBg}" ></g:FlowPanel>
+		<g:FocusPanel  ui:field="pFocusDialog">
+		<g:FlowPanel ui:field="pDialog" addStyleNames="{resources.css.gwtdMessageBox}" >
+			
+			<!-- TitleBar Panel-->
+			<g:FlowPanel ui:field="pTitleBar" addStyleNames="{resources.css.gwtdMessageBoxTitle} {resources.css.notSelectable}">
+				<g:HTML ui:field="hTitle" addStyleNames="{resources.css.gwtdMessageBoxTitleText} {resources.css.left}" />
+				<g:Image ui:field="iClose" addStyleNames="{resources.css.gwtdMessageBoxTitleClose} {resources.css.right}"
+					resource="{resources.closeIcon}" />
+				<g:FlowPanel styleName="{resources.css.clear}"></g:FlowPanel>
+			</g:FlowPanel>
+	
+			<!-- Content Panel -->
+			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdMessageBoxContent}">
+				<g:Image ui:field="icon"  addStyleNames="{resources.css.gwtdMessageBoxIcon} {resources.css.left} {resources.css.notSelectable}"></g:Image>
+				<g:HTML ui:field="hMessage" addStyleNames="{resources.css.gwtdMessageBoxMessage} {resources.css.right}"></g:HTML>
+				<g:FlowPanel styleName="{resources.css.clear}"/>
+			</g:FlowPanel>
+			
+			<!-- Buttons Panel -->
+			<g:FlowPanel ui:field="pButtons" styleName="{resources.css.gwtdMessageBoxButtons} {resources.css.notSelectable}">
+				<g:Button ui:field="okButton">
+					<ui:msg description="OK button">OK</ui:msg>
+				</g:Button>
+				<g:Button ui:field="cancelButton">
+					<ui:msg description="Cancel button">Cancel</ui:msg>
+				</g:Button>
+				<g:Button ui:field="abortButton">
+					<ui:msg description="Abort button">Abort</ui:msg>
+				</g:Button>
+				<g:Button ui:field="retryButton">
+					<ui:msg description="Retry button">Retry</ui:msg>
+				</g:Button>
+				<g:Button ui:field="ignoreButton">
+					<ui:msg description="Ignore button">Ignore</ui:msg>
+				</g:Button>
+				<g:Button ui:field="yesButton">
+					<ui:msg description="Yes button">Yes</ui:msg>
+				</g:Button>
+				<g:Button ui:field="noButton">
+					<ui:msg description="No button">No</ui:msg>
+				</g:Button>
+			</g:FlowPanel>
+		</g:FlowPanel>
+		</g:FocusPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 
