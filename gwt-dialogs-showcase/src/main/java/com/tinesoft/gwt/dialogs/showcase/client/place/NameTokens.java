@@ -21,6 +21,8 @@ public final class NameTokens {
 
     public static final String messagebox = "!messagebox";
 
+    public static final String colordialog = "!colordialog";
+
     /**
      * Hide utility class constructor.
      */
@@ -36,5 +38,9 @@ public final class NameTokens {
 
     public static String getMessagebox() {
         return messagebox;
+    }
+
+    public static String getColordialog() {
+        return colordialog;
     }
 }

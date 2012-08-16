@@ -1,5 +1,7 @@
 
-package com.tinesoft.gwt.dialogs.client;
+package com.tinesoft.gwt.dialogs.client.message.core;
+
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
 
 /**
  * All types of icons that can appear in a {@link MessageBox}.

@@ -27,7 +27,13 @@ public interface ShowcaseResources extends ClientBundle {
 
         String container();
 
+        String button();
+
+        String selectedButton();
+
         String inline();
+
+        String middle();
     }
 
     /**

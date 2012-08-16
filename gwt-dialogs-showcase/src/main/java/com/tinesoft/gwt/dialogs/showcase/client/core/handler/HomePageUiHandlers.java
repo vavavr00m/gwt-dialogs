@@ -16,4 +16,9 @@ public interface HomePageUiHandlers extends UiHandlers {
      */
     void onMessageBoxShowcaseClicked();
 
+    /**
+     * Fired on 'ColorDialog' showcase click.
+     */
+    void onColorDialogShowcaseClicked();
+
 }

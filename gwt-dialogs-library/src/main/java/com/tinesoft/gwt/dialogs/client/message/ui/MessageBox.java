@@ -1,11 +1,13 @@
 
-package com.tinesoft.gwt.dialogs.client;
+package com.tinesoft.gwt.dialogs.client.message.ui;
 
 import com.google.gwt.core.client.GWT;
-import com.tinesoft.gwt.dialogs.client.core.MessageBoxEventAdapter;
-import com.tinesoft.gwt.dialogs.client.core.MessageBoxEventListener;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxButtons;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxDefaultButton;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxEventAdapter;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxEventListener;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxIcon;
 import com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources;
-import com.tinesoft.gwt.dialogs.client.ui.MessageBoxWidget;
 
 /**
  * Displays message boxes on screen.

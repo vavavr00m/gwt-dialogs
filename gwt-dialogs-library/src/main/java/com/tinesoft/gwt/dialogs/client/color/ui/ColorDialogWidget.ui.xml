@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+ 	xmlns:my='urn:import:com.tinesoft.gwt.dialogs.client.color.ui'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:c="urn:import:com.google.gwt.canvas.client">
+
+	<ui:with
+		type="com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources"
+		field="resources"></ui:with>
+
+	<g:FlowPanel ui:field="pMain">		
+		<g:FlowPanel ui:field="pBackground" addStyleNames="{resources.css.gwtdDialogBoxBg}" ></g:FlowPanel>
+		<g:FocusPanel  ui:field="pFocusDialog">
+		<g:FlowPanel ui:field="pDialog" addStyleNames="{resources.css.gwtdDialogBox}" >
+			
+			<!-- TitleBar Panel-->
+			<g:FlowPanel ui:field="pTitleBar" addStyleNames="{resources.css.gwtdDialogBoxTitle} {resources.css.notSelectable}">
+				<g:HTML ui:field="hTitle" addStyleNames="{resources.css.gwtdDialogBoxTitleText} {resources.css.left}" />
+				<g:Image ui:field="iClose" addStyleNames="{resources.css.gwtdDialogBoxTitleClose} {resources.css.right}"
+					resource="{resources.closeIcon}" />
+				<g:FlowPanel styleName="{resources.css.clear}"></g:FlowPanel>
+			</g:FlowPanel>
+	
+			<!-- Content Panel -->
+			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdDialogBoxContent}">
+				
+				<g:HTML ui:field="hMessage" addStyleNames="{resources.css.gwtdDialogBoxMessage}"></g:HTML>
+				<g:FlowPanel styleName="{resources.css.clear}"/>
+				<my:SaturationLightnessPicker ui:field="slPicker" addStyleNames="{resources.css.gwtdColorSlPicker} {resources.css.left}"/>
+				<my:HuePicker ui:field="huePicker" addStyleNames="{resources.css.gwtdColorHuePicker} {resources.css.left}"/>
+				<g:FlowPanel styleName="{resources.css.clear}"/>
+			</g:FlowPanel>
+			
+			<!-- Buttons Panel -->
+			<g:FlowPanel ui:field="pButtons" styleName="{resources.css.gwtdDialogBoxButtons} {resources.css.notSelectable}">
+				<g:Button ui:field="okButton">
+					<ui:msg description="OK button">OK</ui:msg>
+				</g:Button>
+				<g:Button ui:field="cancelButton">
+					<ui:msg description="Cancel button">Cancel</ui:msg>
+				</g:Button>			
+			</g:FlowPanel>
+		</g:FlowPanel>
+		</g:FocusPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 

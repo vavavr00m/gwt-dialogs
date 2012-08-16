@@ -22,9 +22,21 @@
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">MessageBox Showcase</g:Label>
-						<g:Label styleName="{res.css.content}">The standard error, warning,
-						information,
-						and question mark icons.</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the standard dialogs that allows you to display messages (error, warning,
+						information,...)</g:Label>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
+				</g:FlowPanel>
+			</g:FlowPanel>
+			
+			<g:FlowPanel styleName="{res.css.left}">
+				<g:FlowPanel ui:field="colorDialogShowcase" styleName="{res.css.container}">
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Image resource="{res.messageboxesIcon}"></g:Image>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Label styleName="{res.css.title}">ColorDialog Showcase</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the color dialog that allows you to pick up a color.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
 				</g:FlowPanel>

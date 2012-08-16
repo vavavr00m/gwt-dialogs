@@ -10,7 +10,7 @@ import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
-import com.tinesoft.gwt.dialogs.client.MessageBox;
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageBoxShowcaseUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
