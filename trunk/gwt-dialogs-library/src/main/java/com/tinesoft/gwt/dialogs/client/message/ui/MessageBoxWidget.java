@@ -1,5 +1,5 @@
 
-package com.tinesoft.gwt.dialogs.client.ui;
+package com.tinesoft.gwt.dialogs.client.message.ui;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.allen_sauer.gwt.dnd.client.drop.DropController;
@@ -21,7 +21,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.tinesoft.gwt.dialogs.client.MessageBox;
 import com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources;
 
 public class MessageBoxWidget extends Composite implements ClickHandler {

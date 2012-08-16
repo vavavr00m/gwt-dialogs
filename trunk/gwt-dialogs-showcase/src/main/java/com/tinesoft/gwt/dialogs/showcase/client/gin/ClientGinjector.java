@@ -11,6 +11,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.ErrorPagePresente
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.HomePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
 import com.google.gwt.inject.client.AsyncProvider;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
 
 /**
@@ -61,4 +62,6 @@ public interface ClientGinjector extends Ginjector {
     Provider<HomePagePresenter> getHomePagePresenter();
 
     AsyncProvider<MessageBoxShowcasePagePresenter> getMessageBoxShowcasePagePresenter();
+
+    AsyncProvider<ColorDialogShowcasePagePresenter> getColorDialogShowcasePagePresenter();
 }

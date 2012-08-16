@@ -15,7 +15,9 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.DefaultPlace;
 import com.tinesoft.gwt.dialogs.showcase.client.place.ErrorPlace;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 import com.tinesoft.gwt.dialogs.showcase.shared.Config;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.view.ColorDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.client.view.MessageBoxShowcasePageView;
 
 /**
@@ -54,5 +56,10 @@ public class ClientModule extends AbstractPresenterModule {
                       MessageBoxShowcasePagePresenter.MyView.class,
                       MessageBoxShowcasePageView.class,
                       MessageBoxShowcasePagePresenter.MyProxy.class);
+
+        bindPresenter(ColorDialogShowcasePagePresenter.class,
+                      ColorDialogShowcasePagePresenter.MyView.class,
+                      ColorDialogShowcasePageView.class,
+                      ColorDialogShowcasePagePresenter.MyProxy.class);
     }
 }

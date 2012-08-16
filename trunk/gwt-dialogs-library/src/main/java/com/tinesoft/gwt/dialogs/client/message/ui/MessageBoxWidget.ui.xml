@@ -10,27 +10,27 @@
 		field="resources"></ui:with>
 
 	<g:FlowPanel ui:field="pMain">		
-		<g:FlowPanel ui:field="pBackground" addStyleNames="{resources.css.gwtdMessageBoxBg}" ></g:FlowPanel>
+		<g:FlowPanel ui:field="pBackground" addStyleNames="{resources.css.gwtdDialogBoxBg}" ></g:FlowPanel>
 		<g:FocusPanel  ui:field="pFocusDialog">
-		<g:FlowPanel ui:field="pDialog" addStyleNames="{resources.css.gwtdMessageBox}" >
+		<g:FlowPanel ui:field="pDialog" addStyleNames="{resources.css.gwtdDialogBox}" >
 			
 			<!-- TitleBar Panel-->
-			<g:FlowPanel ui:field="pTitleBar" addStyleNames="{resources.css.gwtdMessageBoxTitle} {resources.css.notSelectable}">
-				<g:HTML ui:field="hTitle" addStyleNames="{resources.css.gwtdMessageBoxTitleText} {resources.css.left}" />
-				<g:Image ui:field="iClose" addStyleNames="{resources.css.gwtdMessageBoxTitleClose} {resources.css.right}"
+			<g:FlowPanel ui:field="pTitleBar" addStyleNames="{resources.css.gwtdDialogBoxTitle} {resources.css.notSelectable}">
+				<g:HTML ui:field="hTitle" addStyleNames="{resources.css.gwtdDialogBoxTitleText} {resources.css.left}" />
+				<g:Image ui:field="iClose" addStyleNames="{resources.css.gwtdDialogBoxTitleClose} {resources.css.right}"
 					resource="{resources.closeIcon}" />
 				<g:FlowPanel styleName="{resources.css.clear}"></g:FlowPanel>
 			</g:FlowPanel>
 	
 			<!-- Content Panel -->
-			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdMessageBoxContent}">
-				<g:Image ui:field="icon"  addStyleNames="{resources.css.gwtdMessageBoxIcon} {resources.css.left} {resources.css.notSelectable}"></g:Image>
-				<g:HTML ui:field="hMessage" addStyleNames="{resources.css.gwtdMessageBoxMessage} {resources.css.right}"></g:HTML>
+			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdDialogBoxContent}">
+				<g:Image ui:field="icon"  addStyleNames="{resources.css.gwtdDialogBoxIcon} {resources.css.left} {resources.css.notSelectable}"></g:Image>
+				<g:HTML ui:field="hMessage" addStyleNames="{resources.css.gwtdDialogBoxMessage} {resources.css.right}"></g:HTML>
 				<g:FlowPanel styleName="{resources.css.clear}"/>
 			</g:FlowPanel>
 			
 			<!-- Buttons Panel -->
-			<g:FlowPanel ui:field="pButtons" styleName="{resources.css.gwtdMessageBoxButtons} {resources.css.notSelectable}">
+			<g:FlowPanel ui:field="pButtons" styleName="{resources.css.gwtdDialogBoxButtons} {resources.css.notSelectable}">
 				<g:Button ui:field="okButton">
 					<ui:msg description="OK button">OK</ui:msg>
 				</g:Button>

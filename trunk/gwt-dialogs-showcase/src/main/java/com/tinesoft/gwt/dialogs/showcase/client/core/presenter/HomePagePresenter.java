@@ -44,4 +44,10 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
         placeManager.revealPlace(new PlaceRequest(NameTokens.messagebox));
 
     }
+
+    @Override
+    public void onColorDialogShowcaseClicked() {
+        placeManager.revealPlace(new PlaceRequest(NameTokens.colordialog));
+
+    }
 }

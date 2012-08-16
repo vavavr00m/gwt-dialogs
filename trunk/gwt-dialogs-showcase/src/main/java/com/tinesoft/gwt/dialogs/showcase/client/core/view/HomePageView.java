@@ -22,6 +22,9 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
     @UiField
     FlowPanel messageBoxShowcase;
 
+    @UiField
+    FlowPanel colorDialogShowcase;
+
     public interface Binder extends UiBinder<Widget, HomePageView> {
     }
 
@@ -44,6 +47,16 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
                     getUiHandlers().onMessageBoxShowcaseClicked();
+                }
+            }
+        }, ClickEvent.getType());
+
+        colorDialogShowcase.addDomHandler(new ClickHandler() {
+
+            @Override
+            public void onClick(final ClickEvent event) {
+                if (null != getUiHandlers()) {
+                    getUiHandlers().onColorDialogShowcaseClicked();
                 }
             }
         }, ClickEvent.getType());

@@ -1,5 +1,7 @@
 
-package com.tinesoft.gwt.dialogs.client;
+package com.tinesoft.gwt.dialogs.client.message.core;
+
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
 
 /**
  * Specifies constants defining the default button on a {@link MessageBox}.

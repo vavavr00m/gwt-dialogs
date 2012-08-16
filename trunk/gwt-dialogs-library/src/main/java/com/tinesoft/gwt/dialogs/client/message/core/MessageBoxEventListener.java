@@ -1,5 +1,5 @@
 
-package com.tinesoft.gwt.dialogs.client.core;
+package com.tinesoft.gwt.dialogs.client.message.core;
 
 /**
  * The listener interface for receiving "interesting" events (button clicked, dialog closed,...) on

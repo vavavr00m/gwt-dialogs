@@ -1,4 +1,4 @@
-.gwtd-message-box {
+.gwtd-dialog-box {
 	background: #fff;
 	background-clip: padding-box;
 	border: 1px solid #acacac;
@@ -18,7 +18,7 @@
 	-moz-box-sizing: border-box
 }
 
-.gwtd-message-box-bg {
+.gwtd-dialog-box-bg {
 	background: #000;
 	left: 0;
 	position: absolute;
@@ -30,7 +30,7 @@
 	opacity: .75
 }
 
-.gwtd-message-box-title {
+.gwtd-dialog-box-title {
 	background-color: #fff;
 	color: #000;
 	font-size: 16px;
@@ -39,50 +39,50 @@
 	margin: 0 0 16px;
 }
 
-.gwtd-message-box-title-text {
+.gwtd-dialog-box-title-text {
 	vertical-align: baseline;
 	line-height: 16px;
 	font-weight: bold;
 }
 
-.gwtd-message-box-title-draggable {
+.gwtd-dialog-box-title-draggable {
 	cursor: move;
 }
 
-.gwtd-message-box-title-close {
+.gwtd-dialog-box-title-close {
 	opacity: 0.5;
 	margin: 5px 0px 5px 5px;
 	cursor: default;
 }
 
-.gwtd-message-box-title-close:after {
+.gwtd-dialog-box-title-close:after {
 	opacity: 1.0;
 }
 
-.gwtd-message-box-title-close:hover {
+.gwtd-dialog-box-title-close:hover {
 	opacity: 1.0;
 }
 
-.gwtd-message-box-content {
+.gwtd-dialog-box-content {
 	background-color: #fff;
 	line-height: 1.4em
 }
 
-.gwtd-message-box-icon {
+.gwtd-dialog-box-icon {
 	padding: 0px 5px 5px 0px;
 }
 
-.gwtd-message-box-message {
+.gwtd-dialog-box-message {
 	text-align: justify;
 	width: 398px;
 	padding: 0px 0px 5px 5px;
 }
 
-.gwtd-message-box-buttons {
+.gwtd-dialog-box-buttons {
 	margin-top: 16px
 }
 
-.gwtd-message-box-buttons button {
+.gwtd-dialog-box-buttons button {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -106,7 +106,7 @@
 	padding: 0 8px
 }
 
-.gwtd-message-box-buttons button:hover,.gwtd-message-box-buttons button:active {
+.gwtd-dialog-box-buttons button:hover,.gwtd-dialog-box-buttons button:active {
 	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -120,17 +120,17 @@
 	color: #333
 }
 
-.gwtd-message-box-buttons button:active {
+.gwtd-dialog-box-buttons button:active {
 	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
 	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1)
 }
 
-.gwtd-message-box-buttons button:focus {
+.gwtd-dialog-box-buttons button:focus {
 	border: 1px solid #4d90fe
 }
 
-.gwtd-message-box-buttons button[disabled] {
+.gwtd-dialog-box-buttons button[disabled] {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -142,39 +142,3 @@
 }
 
 
-.notSelectable {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.selectedButton {
-	color: #FFFFFF !important;
-	background-color: #4D90FE !important;
-	background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED)
-		!important;
-}
-
-.stripe {
-	border-top: 1px solid #E8E8E8;
-	border-bottom: 1px solid #E8E8E8;
-	background-color: #F8F8F8;
-}
-
-
-.left {
-	display: block;
-	float: left;
-}
-
-.right {
-	display: block;
-	float: right;
-}
-
-.clear {
-	clear: both;
-}

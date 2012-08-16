@@ -12,18 +12,17 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id: MessageBoxResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
-public interface MessageBoxResources extends ClientBundle {
+public interface ColorDialogResources extends ClientBundle {
 
-    interface MessageBoxStyle extends BaseDialogStyle {
+    interface ColorDialogStyle extends BaseDialogStyle {
+
+        @ClassName("gwtd-color-huePicker")
+        String gwtdColorHuePicker();
+
+        @ClassName("gwtd-color-slPicker")
+        String gwtdColorSlPicker();
 
     }
-
-    /**
-     * 
-     * @return question image bundle.
-     */
-    @Source("images/ask.png")
-    ImageResource askIcon();
 
     /**
      * 
@@ -42,29 +41,8 @@ public interface MessageBoxResources extends ClientBundle {
     /**
      * @return css bundle.
      */
-    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "MessageBoxStyle.css" })
+    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "ColorDialogStyle.css" })
     @NotStrict
-    MessageBoxStyle css();
-
-    /**
-     * 
-     * @return error image bundle.
-     */
-    @Source("images/error.png")
-    ImageResource errorIcon();
-
-    /**
-     * 
-     * @return information image bundle.
-     */
-    @Source("images/info.png")
-    ImageResource infoIcon();
-
-    /**
-     * 
-     * @return warning image bundle.
-     */
-    @Source("images/warn.png")
-    ImageResource warnIcon();
+    ColorDialogStyle css();
 
 }
