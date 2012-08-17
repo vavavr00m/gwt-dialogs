@@ -23,7 +23,7 @@
 			</g:FlowPanel>
 	
 			<!-- Content Panel -->
-			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdDialogBoxContent}">
+			<g:FlowPanel ui:field="pContent" addStyleNames="{resources.css.gwtdDialogBoxContent} {resources.css.notSelectable}">
 				
 				<g:HTML ui:field="hMessage" addStyleNames="{resources.css.gwtdDialogBoxMessage}"></g:HTML>
 				<g:FlowPanel styleName="{resources.css.clear}"/>

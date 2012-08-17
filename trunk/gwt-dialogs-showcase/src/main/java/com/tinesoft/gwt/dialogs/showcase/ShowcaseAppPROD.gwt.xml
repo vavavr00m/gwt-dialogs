@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- @author Tine Kondo<kondotine@gmail.com> -->
+<!-- @version $Id: ShowcaseApp.gwt.xml 3337 2011-08-08 15:37:56Z kondotine 
+	$ -->
+
+<module rename-to="showcase">
+
+	<!-- Core configuration -->
+	<inherits name="com.tinesoft.gwt.dialogs.showcase.ShowcaseApp" />
+	
+	<!-- i18n -->
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="fr" />
+	<set-property-fallback name="locale" value="en" />
+
+	<!-- GWT Log-->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-WARN" />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-RemoteLogger" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+
+	<set-property name="log_WindowLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" />
+	<set-property name="log_FirebugLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	
+
+</module>

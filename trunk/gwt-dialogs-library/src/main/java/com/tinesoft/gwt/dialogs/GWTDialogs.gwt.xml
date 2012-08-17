@@ -17,25 +17,12 @@
 	<!-- Inherit UiBinder with GIN support -->
 	<inherits name="com.google.gwt.uibinder.GinUiBinder" />
 
-	<!-- Inherit GWT Log -->
-	<inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
-
-<!-- Inherit GWT Drag&Drop -->
+<!-- Inherit GWT Drag-n-Drop -->
 	<inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
 	
 	<!-- source -->
 	<source path="client" excludes="**/*Test.java,**/*TestSuite.java" />
 	<source path="shared" excludes="**/*Test.java,**/*TestSuite.java" />
-
-	<!-- Configuration -->
-	<set-property name="log_GWTLogger" value="ENABLED" />
-	<set-property name="log_ConsoleLogger" value="ENABLED" />
-
-	<set-property name="log_WindowLogger" value="DISABLED" />
-	<set-property name="log_SystemLogger" value="DISABLED" />
-	<set-property name="log_FirebugLogger" value="DISABLED" />
-	<set-property name="log_DivLogger" value="DISABLED" />
-
 
 	<set-configuration-property name="UiBinder.useSafeHtmlTemplates"
 		value="true" />

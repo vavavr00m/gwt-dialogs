@@ -77,4 +77,10 @@ public interface ShowcaseResources extends ClientBundle {
     @Source("images/messageboxes.png")
     ImageResource messageboxesIcon();
 
+    /**
+     * 
+     * @return color dialog image bundle
+     */
+    @Source("images/colordialog.png")
+    ImageResource colorDialogIcon();
 }
