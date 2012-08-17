@@ -9,6 +9,10 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyDownEvent;
+import com.google.gwt.event.dom.client.KeyPressEvent;
+import com.google.gwt.event.dom.client.KeyPressHandler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
@@ -19,7 +23,10 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.FocusPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.IntegerBox;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.ValueBoxBase;
 import com.google.gwt.user.client.ui.Widget;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedEvent;
 import com.tinesoft.gwt.dialogs.client.color.core.HueChangedEvent;
@@ -30,6 +37,27 @@ import com.tinesoft.gwt.dialogs.client.util.ColorUtils;
 public class ColorDialogWidget extends Composite implements ClickHandler {
 
     interface ColorDialogWidgetUiBinder extends UiBinder<Widget, ColorDialogWidget> {
+    }
+
+    /**
+     * Custom {@link KeyPressHandler} that prevents to enter non digit in the source box widget (any
+     * instance of {@link ValueBoxBase} like TextBox, IntegerBox, TextArea).
+     * 
+     * @author Tine Kondo<kondotine@gmail.com>
+     * @version $Id$
+     */
+    class NumbersOnlyKeyPressHandler implements KeyPressHandler {
+
+        @Override
+        public void onKeyPress(final KeyPressEvent event) {
+            if (!Character.isDigit(event.getCharCode())) {
+                if (event.getSource() instanceof ValueBoxBase) {
+                    ((ValueBoxBase<?>) event.getSource()).cancelKey();
+                }
+
+            }
+
+        }
     }
 
     private static final int DEFAULT_FADE_OUT = 500;
@@ -78,14 +106,29 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     @UiField(provided = true)
     SaturationLightnessPicker slPicker;
 
+    @UiField
+    IntegerBox redColorIntegerBox;
+
+    @UiField
+    IntegerBox blueColorIntegerBox;
+
+    @UiField
+    IntegerBox greenColorIntegerBox;
+
+    @UiField
+    IntegerBox hueIntegerBox;
+
+    @UiField
+    TextBox pickedColorIntegerBox;
+
     final ColorDialogResources resources;
 
     private final ColorDialog colorDialog;
 
     private final ColorDialogWidgetUiBinder uiBinder = GWT.create(ColorDialogWidgetUiBinder.class);
-
     // helpers for adding drag & drop support on the dialog box
     private PickupDragController dragController;
+
     private DropController dropController;
 
     public ColorDialogWidget(final ColorDialog colorDialog, final ColorDialogResources resources) {
@@ -100,6 +143,10 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         this.colorDialog = colorDialog;
 
         initialize();
+    }
+
+    public String getColor() {
+        return slPicker.getColor();
     }
 
     /**
@@ -147,17 +194,6 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
 
     }
 
-    // bind saturation/lightness picker and hue picker together
-    @UiHandler("huePicker")
-    void onHueChanged(HueChangedEvent event) {
-        slPicker.setHue(event.getHue());
-    }
-
-    @UiHandler("slPicker")
-    void onColorChanged(ColorChangedEvent event) {
-        ColorDialog.setColor(event.getColor());
-    }
-
     private void initDragAndDrop() {
         // // ensure the document BODY has dimensions in standards mode
         // RootPanel.get().setWidth("100%;");
@@ -185,6 +221,45 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
 
         initDragAndDrop();
 
+        initEventHandlers();
+
+    }
+
+    /**
+     * Initializes event handlers on color integer box (for red, green, blue, and hue value).
+     */
+    private void initEventHandlers() {
+        final KeyPressHandler numbersOnlyHandler = new NumbersOnlyKeyPressHandler();
+
+        final ValueChangeHandler<Integer> colorChangedHandler = new ValueChangeHandler<Integer>() {
+
+            @Override
+            public void onValueChange(ValueChangeEvent<Integer> event) {
+
+                if (!(event.getValue() >= 0 && event.getValue() < 256)) {
+                    // default valid value
+                    ((IntegerBox) event.getSource()).setValue(255);
+                }
+
+                final int r = redColorIntegerBox.getValue();
+                final int g = greenColorIntegerBox.getValue();
+                final int b = blueColorIntegerBox.getValue();
+
+                slPicker.setColor(ColorUtils.rgb2hex(r, g, b));
+            }
+        };
+
+        // adds value changed handler on each color text box
+        redColorIntegerBox.addValueChangeHandler(colorChangedHandler);
+        blueColorIntegerBox.addValueChangeHandler(colorChangedHandler);
+        greenColorIntegerBox.addValueChangeHandler(colorChangedHandler);
+
+        // prevents entering of non digits values in color text boxes
+        redColorIntegerBox.addKeyPressHandler(numbersOnlyHandler);
+        greenColorIntegerBox.addKeyPressHandler(numbersOnlyHandler);
+        blueColorIntegerBox.addKeyPressHandler(numbersOnlyHandler);
+        hueIntegerBox.addKeyPressHandler(numbersOnlyHandler);
+
     }
 
     @UiHandler("cancelButton")
@@ -211,6 +286,19 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         }
     }
 
+    @UiHandler("slPicker")
+    void onColorChanged(final ColorChangedEvent event) {
+        ColorDialog.setColor(event.getColor());
+
+        // we also set the R, G, B text boxes values
+        final int[] rgb = ColorUtils.getRGB(event.getColor());
+        redColorIntegerBox.setValue(rgb[0]);
+        blueColorIntegerBox.setValue(rgb[1]);
+        greenColorIntegerBox.setValue(rgb[2]);
+
+        pickedColorIntegerBox.setText(event.getColor());
+    }
+
     @UiHandler("pFocusDialog")
     void onDialogKeyDown(final KeyDownEvent event) {
         if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
@@ -222,7 +310,6 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
 
     protected void onEnterKeyDown() {
         if ((colorDialog != null) && (colorDialog.getListener() != null)) {
-
             colorDialog.getListener().onOkButtonClicked();
             hide();
 
@@ -236,12 +323,38 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         }
     }
 
+    // bind saturation/lightness picker and hue picker together
+    @UiHandler("huePicker")
+    void onHueChanged(final HueChangedEvent event) {
+        slPicker.setHue(event.getHue());
+        hueIntegerBox.setValue(event.getHue());
+    }
+
+    @UiHandler("hueIntegerBox")
+    void onHueIntegerBoxValueChanged(final ValueChangeEvent<Integer> event) {
+        if ((event.getValue() >= 0) && (event.getValue() <= 360)) {
+            slPicker.setHue(event.getValue());
+            huePicker.setHue(event.getValue());
+        } else {
+            hueIntegerBox.setValue(360);
+        }
+    }
+
     @UiHandler("okButton")
     void onOkButtonClicked(final ClickEvent event) {
         if ((colorDialog != null) && (colorDialog.getListener() != null)) {
             colorDialog.getListener().onOkButtonClicked();
             hide();
         }
+    }
+
+    public void setColor(final String color) {
+        final int[] rgb = ColorUtils.getRGB(color);
+        final int[] hsl = ColorUtils.rgb2hsl(rgb);
+        huePicker.setHue(hsl[0]);
+        slPicker.setColor(color);
+        ColorDialog.setColor(color);
+
     }
 
     public void show() {
@@ -260,18 +373,4 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         fade.run(DEFAULT_FADE_IN);
         pFocusDialog.setFocus(true);
     }
-
-    public void setColor(String color) {
-        int[] rgb = ColorUtils.getRGB(color);
-        int[] hsl = ColorUtils.rgb2hsl(rgb);
-        huePicker.setHue(hsl[0]);
-        slPicker.setColor(color);
-        ColorDialog.setColor(color);
-
-    }
-
-    public String getColor() {
-        return slPicker.getColor();
-    }
-
 }

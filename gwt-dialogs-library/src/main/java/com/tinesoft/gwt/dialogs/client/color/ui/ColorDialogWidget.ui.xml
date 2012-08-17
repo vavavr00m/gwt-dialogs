@@ -29,12 +29,34 @@
 				<g:FlowPanel styleName="{resources.css.clear}"/>
 				<my:SaturationLightnessPicker ui:field="slPicker" addStyleNames="{resources.css.gwtdColorSlPicker} {resources.css.left}"/>
 				<my:HuePicker ui:field="huePicker" addStyleNames="{resources.css.gwtdColorHuePicker} {resources.css.left}"/>
+				<g:Grid addStyleNames="{resources.css.right}">
+					<g:row>
+						<g:customCell><g:Label><ui:msg description="Blue color label">R: </ui:msg></g:Label></g:customCell>
+						<g:customCell><g:IntegerBox ui:field="redColorIntegerBox" maxLength="3"/></g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label><ui:msg description="Green color label">G: </ui:msg></g:Label></g:customCell>
+						<g:customCell><g:IntegerBox ui:field="greenColorIntegerBox" maxLength="3"/></g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label><ui:msg description="Blue color label">B: </ui:msg></g:Label></g:customCell>
+						<g:customCell><g:IntegerBox ui:field="blueColorIntegerBox" maxLength="3"/></g:customCell>
+					</g:row>					
+					<g:row>
+						<g:customCell><g:Label><ui:msg description="Hue label">HUE: </ui:msg></g:Label></g:customCell>
+						<g:customCell><g:IntegerBox ui:field="hueIntegerBox" maxLength="3"/></g:customCell>
+					</g:row>
+					<g:row>	
+						<g:customCell><g:Label/></g:customCell>										
+						<g:customCell><g:TextBox ui:field="pickedColorIntegerBox" readOnly="true"/></g:customCell>
+					</g:row>
+				</g:Grid>
 				<g:FlowPanel styleName="{resources.css.clear}"/>
 			</g:FlowPanel>
 			
 			<!-- Buttons Panel -->
 			<g:FlowPanel ui:field="pButtons" styleName="{resources.css.gwtdDialogBoxButtons} {resources.css.notSelectable}">
-				<g:Button ui:field="okButton">
+				<g:Button ui:field="okButton" addStyleNames="{resources.css.selectedButton}">
 					<ui:msg description="OK button">OK</ui:msg>
 				</g:Button>
 				<g:Button ui:field="cancelButton">
