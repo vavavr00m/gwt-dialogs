@@ -24,7 +24,7 @@
 	<!-- ============ -->
 	<properties>
 		<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseApp</gwt.module>
-		<gwt.entrypoint>com.tinesoft.gwt.dialogs.showcase.showcase.client.ShowcaseApp</gwt.entrypoint>
+		<gwt.entrypoint>com.tinesoft.gwt.dialogs.showcase.client.ShowcaseApp</gwt.entrypoint>
 		<gwt.target>index.html</gwt.target>
 		<gwt.style>PRETTY</gwt.style>
 
@@ -488,6 +488,38 @@ filesCopiedToWebInfLib=
 			</build>
 		</profile>
 
+        <!-- DEVELOPMENT MODE -->
+        <profile>
+            <id>env-dev</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+
+            <properties>	
+				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppDEV</gwt.module>
+                <gwt.style>PRETTY</gwt.style>
+            </properties>
+        </profile>
+        
+        <!-- PRODUCTION MODE -->
+        <profile>
+            <id>env-prod</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>prod</value>
+                </property>
+            </activation>
+
+            <properties>
+				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppPROD</gwt.module>
+                <gwt.style>OBFUSCATED</gwt.style>
+            </properties>
+        </profile>
+        
 		<!-- HUDSON : Continous Integration -->
 		<profile>
 			<id>continous-integration</id>

@@ -16,9 +16,6 @@
 	<!-- Inherit the GWT Dialogs library -->
 	<inherits name="com.tinesoft.gwt.dialogs.GWTDialogs" />
 
-	<!-- Inherit the GWT Log -->
-	<inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
-
 	<!-- Inherit the GWT Platform -->
 	<inherits name="com.gwtplatform.mvp.Mvp" />
 	<inherits name="com.gwtplatform.dispatch.Dispatch" />
@@ -34,16 +31,6 @@
 	<source path="client" excludes="**/*Test.java,**/*TestSuite.java" />
 	<source path="shared" excludes="**/*Test.java,**/*TestSuite.java" />
 	
-		<!-- GWT Log Configuration -->
-	<inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
-	<set-property name="log_GWTLogger" value="ENABLED" />
-	<set-property name="log_ConsoleLogger" value="ENABLED" />
-
-	<set-property name="log_WindowLogger" value="DISABLED" />
-	<set-property name="log_SystemLogger" value="DISABLED" />
-	<set-property name="log_FirebugLogger" value="DISABLED" />
-	<set-property name="log_DivLogger" value="DISABLED" />
-
 	<!-- This is required for GWT Platform Proxy's generator -->
 	<define-configuration-property name="gin.ginjector"
 		is-multi-valued="false" />

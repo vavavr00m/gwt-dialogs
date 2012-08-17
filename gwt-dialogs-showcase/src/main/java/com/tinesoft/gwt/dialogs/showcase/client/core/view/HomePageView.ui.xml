@@ -32,7 +32,7 @@
 			<g:FlowPanel styleName="{res.css.left}">
 				<g:FlowPanel ui:field="colorDialogShowcase" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
-						<g:Image resource="{res.messageboxesIcon}"></g:Image>
+						<g:Image resource="{res.colorDialogIcon}"></g:Image>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">ColorDialog Showcase</g:Label>
