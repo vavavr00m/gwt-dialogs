@@ -14,7 +14,6 @@
 	
 	<!-- i18n -->
 	<extend-property name="locale" values="en" />
-	<extend-property name="locale" values="fr" />
 	<set-property-fallback name="locale" value="en" />
 
 	<!-- GWT Log-->

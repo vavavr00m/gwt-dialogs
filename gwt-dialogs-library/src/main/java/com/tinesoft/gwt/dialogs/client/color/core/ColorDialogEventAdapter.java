@@ -9,7 +9,6 @@ package com.tinesoft.gwt.dialogs.client.color.core;
  * listeners by extending this class and overriding only the methods of interest.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public abstract class ColorDialogEventAdapter implements ColorDialogEventListener {
 

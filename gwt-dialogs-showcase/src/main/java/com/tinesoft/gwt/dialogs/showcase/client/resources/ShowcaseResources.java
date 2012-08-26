@@ -9,7 +9,6 @@ import com.google.gwt.resources.client.ImageResource;
  * Client bundle for the application css and image resources.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: MessageDialogResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
 public interface ShowcaseResources extends ClientBundle {
 

@@ -7,7 +7,6 @@ import com.google.gwt.event.shared.GwtEvent;
  * Custom event fired by a {@link MenuItemClickHandler} when the item has been clicked.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public class MenuItemClickEvent extends GwtEvent<MenuItemClickHandler> {
 

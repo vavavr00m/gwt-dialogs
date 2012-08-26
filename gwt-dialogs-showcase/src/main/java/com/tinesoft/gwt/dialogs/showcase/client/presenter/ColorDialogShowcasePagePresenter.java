@@ -16,6 +16,11 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter
 import com.tinesoft.gwt.dialogs.showcase.client.handler.ColorDialogShowcaseUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
+/**
+ * Color dialog page presenter.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class ColorDialogShowcasePagePresenter extends Presenter<ColorDialogShowcasePagePresenter.MyView, ColorDialogShowcasePagePresenter.MyProxy> implements ColorDialogShowcaseUiHandlers {
 
     public interface MyView extends View, HasUiHandlers<ColorDialogShowcaseUiHandlers> {

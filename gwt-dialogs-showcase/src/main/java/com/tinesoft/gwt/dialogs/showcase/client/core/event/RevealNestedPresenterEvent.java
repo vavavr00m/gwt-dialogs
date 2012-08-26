@@ -33,7 +33,6 @@ import com.google.gwt.event.shared.HasHandlers;
  * </pre>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: RevealNestedPresenterEvent.java 3093 2011-07-19 16:02:30Z kondotine $
  */
 public class RevealNestedPresenterEvent extends GwtEvent<RevealNestedPresenterHandler> {
 

@@ -18,7 +18,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
  * Default error presenter.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ErrorPagePresenter.java 2938 2011-07-08 14:30:50Z kondotine $
  */
 public class ErrorPagePresenter extends Presenter<ErrorPagePresenter.MyView, ErrorPagePresenter.MyProxy> implements ErrorPageUiHandlers {
 

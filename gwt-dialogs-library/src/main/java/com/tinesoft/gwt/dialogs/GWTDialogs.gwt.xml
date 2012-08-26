@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- @author Tine Kondo<kondotine@gmail.com> -->
-<!-- @version $Id: GWTDialogs.gwt.xml 3337 2011-08-08 15:37:56Z kondotine 
-	$ -->
+<!-- @version $Id: GWTDialogs.gwt.xml 3337 2011-08-08 15:37:56Z kondotine $ -->
+	
 
 <module>
 	<!-- Inherit the core Web Toolkit stuff -->

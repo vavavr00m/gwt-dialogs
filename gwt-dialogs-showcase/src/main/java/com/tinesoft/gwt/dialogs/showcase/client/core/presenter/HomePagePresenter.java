@@ -15,6 +15,11 @@ import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.tinesoft.gwt.dialogs.showcase.client.core.handler.HomePageUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
+/**
+ * Home page presenter.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> implements HomePageUiHandlers {
 
     private final PlaceManager placeManager;

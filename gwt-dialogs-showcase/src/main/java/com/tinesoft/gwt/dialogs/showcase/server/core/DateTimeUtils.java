@@ -8,7 +8,6 @@ import java.util.Date;
  * Provides date and time utility methods.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: DateTimeUtils.java 3348 2011-08-09 13:45:19Z kondotine $
  */
 public final class DateTimeUtils {
 

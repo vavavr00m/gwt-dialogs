@@ -18,17 +18,16 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.ErrorPlace;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowcasePagePresenter;
-import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.view.ColorDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.client.view.ContextMenuDialogShowcasePageView;
-import com.tinesoft.gwt.dialogs.showcase.client.view.MessageBoxShowcasePageView;
+import com.tinesoft.gwt.dialogs.showcase.client.view.MessageDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.shared.Config;
 
 /**
  * Client GIN-jector module.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ClientModule.java 3858 2012-02-08 10:45:22Z louis.jc $
  */
 public class ClientModule extends AbstractPresenterModule {
 
@@ -60,10 +59,10 @@ public class ClientModule extends AbstractPresenterModule {
         bindPresenter(HomePagePresenter.class, HomePagePresenter.MyView.class, HomePageView.class,
                       HomePagePresenter.MyProxy.class);
 
-        bindPresenter(MessageBoxShowcasePagePresenter.class,
-                      MessageBoxShowcasePagePresenter.MyView.class,
-                      MessageBoxShowcasePageView.class,
-                      MessageBoxShowcasePagePresenter.MyProxy.class);
+        bindPresenter(MessageDialogShowcasePagePresenter.class,
+                      MessageDialogShowcasePagePresenter.MyView.class,
+                      MessageDialogShowcasePageView.class,
+                      MessageDialogShowcasePagePresenter.MyProxy.class);
 
         bindPresenter(ColorDialogShowcasePagePresenter.class,
                       ColorDialogShowcasePagePresenter.MyView.class,

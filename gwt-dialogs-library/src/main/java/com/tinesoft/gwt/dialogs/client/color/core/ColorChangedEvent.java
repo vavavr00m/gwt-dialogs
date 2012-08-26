@@ -7,7 +7,6 @@ import com.google.gwt.event.shared.GwtEvent;
  * Custom event fired by a {@link ColorChangedHandler} when its color has changed.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public class ColorChangedEvent extends GwtEvent<ColorChangedHandler> {
 

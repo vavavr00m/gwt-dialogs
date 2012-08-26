@@ -12,6 +12,11 @@ import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
+/**
+ * Context menu dialog page presenter.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class ContextMenuDialogShowcasePagePresenter extends Presenter<ContextMenuDialogShowcasePagePresenter.MyView, ContextMenuDialogShowcasePagePresenter.MyProxy> {
 
     public interface MyView extends View {

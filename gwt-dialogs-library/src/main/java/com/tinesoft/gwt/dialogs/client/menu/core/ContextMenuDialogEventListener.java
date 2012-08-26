@@ -5,7 +5,6 @@ package com.tinesoft.gwt.dialogs.client.menu.core;
  * The listener interface for receiving "interesting" events on a the context menu dialog
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public interface ContextMenuDialogEventListener {
 

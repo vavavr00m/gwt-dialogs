@@ -13,6 +13,11 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.handler.HomePageUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.HomePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 
+/**
+ * Home page view.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> implements HomePagePresenter.MyView {
 
     private final Widget widget;

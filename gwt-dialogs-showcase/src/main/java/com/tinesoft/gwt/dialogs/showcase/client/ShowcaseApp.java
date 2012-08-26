@@ -16,7 +16,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
  * Entry point to GWT Dialogs Showcase Application.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ShowcaseApp.java 2963 2011-07-11 15:03:57Z kondotine $
  */
 public class ShowcaseApp implements EntryPoint {
 

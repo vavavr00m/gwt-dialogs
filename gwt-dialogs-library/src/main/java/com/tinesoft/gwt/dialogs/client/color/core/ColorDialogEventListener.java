@@ -3,10 +3,9 @@ package com.tinesoft.gwt.dialogs.client.color.core;
 
 /**
  * The listener interface for receiving "interesting" events (button clicked, dialog closed,...) on
- * a the color dialog
+ * a the color dialog.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public interface ColorDialogEventListener {
 

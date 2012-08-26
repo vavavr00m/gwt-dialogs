@@ -12,7 +12,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.HomePagePresenter
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
 import com.google.gwt.inject.client.AsyncProvider;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
-import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowcasePagePresenter;
 
 /**
@@ -22,7 +22,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowc
  * </p>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ClientGinjector.java 3427 2011-08-17 15:02:04Z kondotine $
  */
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {
@@ -62,7 +61,7 @@ public interface ClientGinjector extends Ginjector {
      */
     Provider<HomePagePresenter> getHomePagePresenter();
 
-    AsyncProvider<MessageBoxShowcasePagePresenter> getMessageBoxShowcasePagePresenter();
+    AsyncProvider<MessageDialogShowcasePagePresenter> getMessageBoxShowcasePagePresenter();
 
     AsyncProvider<ColorDialogShowcasePagePresenter> getColorDialogShowcasePagePresenter();
 

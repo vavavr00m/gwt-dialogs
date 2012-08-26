@@ -12,7 +12,6 @@ import com.tinesoft.gwt.dialogs.showcase.shared.Config;
  * Server guice module for servlets and data access.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: DispatchServletModule.java 3093 2011-07-19 16:02:30Z kondotine $
  */
 public class DispatchServletModule extends ServletModule {
 
