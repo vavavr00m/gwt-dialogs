@@ -25,10 +25,11 @@
 		</g:HTMLPanel>
 		<g:FlowPanel styleName="{res.css.clear}">
 			<g:HorizontalPanel  addStyleNames="{res.css.middle}">
-				<my:ContextMenuDialogWidget triggerMode="onLeftClick">
+			
+				<my:ContextMenuDialogWidget triggerMode="onMouseOver">
 					<my:target>
-						<g:Button ui:field="leftMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
-							<ui:msg description="Left Menu button">Left click to see the context menu...</ui:msg>
+						<g:Button ui:field="overMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
+							<ui:msg description="Over Menu button">Mouse over to see the context menu...</ui:msg>
 						</g:Button>	
 					</my:target>
 					<my:menuitem><my:MenuItemWidget icon="{res.editIcon}" text="Menu item 1"/></my:menuitem>
@@ -38,10 +39,10 @@
 					<my:menuitem><my:MenuItemWidget  text="Menu item 4"/></my:menuitem>
 				</my:ContextMenuDialogWidget>
 				
-				<my:ContextMenuDialogWidget triggerMode="onMouseOver">
+				<my:ContextMenuDialogWidget triggerMode="onLeftClick">
 					<my:target>
-						<g:Button ui:field="overMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
-							<ui:msg description="Over Menu button">Mouse over to see the context menu...</ui:msg>
+						<g:Button ui:field="leftMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
+							<ui:msg description="Left Menu button">Left click to see the context menu...</ui:msg>
 						</g:Button>	
 					</my:target>
 					<my:menuitem><my:MenuItemWidget icon="{res.editIcon}" text="Menu item 1"/></my:menuitem>
