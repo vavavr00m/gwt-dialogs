@@ -8,7 +8,6 @@ import com.tinesoft.gwt.dialogs.client.menu.ui.ContextMenuDialogWidget;
  * Utility class for the {@link ContextMenuDialogWidget}.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public final class ContextMenuDialogUtils {
 

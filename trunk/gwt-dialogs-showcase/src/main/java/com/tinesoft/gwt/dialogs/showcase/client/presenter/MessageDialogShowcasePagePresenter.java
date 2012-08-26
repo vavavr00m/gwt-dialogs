@@ -12,26 +12,30 @@ import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
-import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageBoxShowcaseUiHandlers;
+import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageDialogShowcaseUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
-public class MessageBoxShowcasePagePresenter extends Presenter<MessageBoxShowcasePagePresenter.MyView, MessageBoxShowcasePagePresenter.MyProxy> implements MessageBoxShowcaseUiHandlers {
+/**
+ * Message dialog page presenter.
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
+public class MessageDialogShowcasePagePresenter extends Presenter<MessageDialogShowcasePagePresenter.MyView, MessageDialogShowcasePagePresenter.MyProxy> implements MessageDialogShowcaseUiHandlers {
 
     private final static String LOREM_IPSUM = "Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>. Curabitur lobortis laoreet tristique."
                                               + "In nec metus vitae mi pellentesque tincidunt. <i>Aenean id metus</i> at lectus lacinia viverra. Ut ullamcorper congue vehicula. Fusce "
                                               + "<u>adipiscing sagittis enim</u>, nec molestie nulla fringilla quis. Ut pharetra lacinia libero eu egestas. Cras augue diam, varius et "
                                               + "tincidunt tincidunt, placerat vel velit.";
 
-    public interface MyView extends View, HasUiHandlers<MessageBoxShowcaseUiHandlers> {
+    public interface MyView extends View, HasUiHandlers<MessageDialogShowcaseUiHandlers> {
     }
 
     @ProxyCodeSplit
     @NameToken(NameTokens.messagebox)
-    public interface MyProxy extends ProxyPlace<MessageBoxShowcasePagePresenter> {
+    public interface MyProxy extends ProxyPlace<MessageDialogShowcasePagePresenter> {
     }
 
     @Inject
-    public MessageBoxShowcasePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
+    public MessageDialogShowcasePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
         super(eventBus, view, proxy);
         getView().setUiHandlers(this);
     }

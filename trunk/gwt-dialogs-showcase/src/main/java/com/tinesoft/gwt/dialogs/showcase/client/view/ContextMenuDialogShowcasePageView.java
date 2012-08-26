@@ -9,6 +9,11 @@ import com.gwtplatform.mvp.client.ViewImpl;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 
+/**
+ * Context menu dialog showcase page view.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class ContextMenuDialogShowcasePageView extends ViewImpl implements ContextMenuDialogShowcasePagePresenter.MyView {
 
     private final Widget widget;

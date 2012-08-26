@@ -7,7 +7,6 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
  * Specifies constants defining the default button on a {@link MessageDialog}.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public enum MessageDialogDefaultButton {
 

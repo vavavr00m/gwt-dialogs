@@ -10,11 +10,10 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
  * Client bundle for the {@link MessageDialog} css and image resources.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: MessageDialogResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
 public interface MessageDialogResources extends ClientBundle {
 
-    interface MessageBoxStyle extends BaseDialogStyle {
+    interface MessageDialogStyle extends BaseDialogStyle {
 
     }
 
@@ -44,7 +43,7 @@ public interface MessageDialogResources extends ClientBundle {
      */
     @Source({ "BaseStyle.css", "BaseDialogStyle.css", "MessageDialogStyle.css" })
     @NotStrict
-    MessageBoxStyle css();
+    MessageDialogStyle css();
 
     /**
      * 

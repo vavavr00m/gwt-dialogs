@@ -7,7 +7,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 /**
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ContinousIntegrationTestSuite.java 3853 2012-02-03 13:13:05Z kondotine $
  */
 @RunWith(Suite.class)
 @SuiteClasses(value = {

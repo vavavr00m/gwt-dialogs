@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- @author Tine Kondo<kondotine@gmail.com> -->
-<!-- @version $Id: ErrorPageView.ui.xml 2293 2011-05-23 12:30:28Z kondotine $ -->
 
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"

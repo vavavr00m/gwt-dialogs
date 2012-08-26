@@ -5,7 +5,6 @@ package com.tinesoft.gwt.dialogs.showcase.client.place;
  * Contains the unique identifiers of all presenters.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: NameTokens.java 3427 2011-08-17 15:02:04Z kondotine $
  */
 public final class NameTokens {
 

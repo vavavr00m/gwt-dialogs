@@ -7,7 +7,6 @@ import com.google.gwt.event.shared.GwtEvent;
  * Custom event fired by a {@link HueChangedHandler} when its hue value has changed.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public class HueChangedEvent extends GwtEvent<HueChangedHandler> {
 

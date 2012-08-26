@@ -9,11 +9,16 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
-import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageBoxShowcaseUiHandlers;
-import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageDialogShowcaseUiHandlers;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 
-public class MessageBoxShowcasePageView extends ViewWithUiHandlers<MessageBoxShowcaseUiHandlers> implements MessageBoxShowcasePagePresenter.MyView {
+/**
+ * Message dialog showcase page view.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
+public class MessageDialogShowcasePageView extends ViewWithUiHandlers<MessageDialogShowcaseUiHandlers> implements MessageDialogShowcasePagePresenter.MyView {
 
     private final Widget widget;
 
@@ -32,11 +37,11 @@ public class MessageBoxShowcasePageView extends ViewWithUiHandlers<MessageBoxSho
     @UiField
     FlowPanel errorMessageBox;
 
-    public interface Binder extends UiBinder<Widget, MessageBoxShowcasePageView> {
+    public interface Binder extends UiBinder<Widget, MessageDialogShowcasePageView> {
     }
 
     @Inject
-    public MessageBoxShowcasePageView(final Binder binder, final ShowcaseResources resources) {
+    public MessageDialogShowcasePageView(final Binder binder, final ShowcaseResources resources) {
         res = resources;
         widget = binder.createAndBindUi(this);
         initialize();

@@ -42,7 +42,6 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
      * instance of {@link ValueBoxBase} like TextBox, IntegerBox, TextArea).
      * 
      * @author Tine Kondo<kondotine@gmail.com>
-     * @version $Id$
      */
     class NumbersOnlyKeyPressHandler implements KeyPressHandler {
 
@@ -180,8 +179,8 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according to
-     * its type.
+     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according
+     * to its type.
      */
     private void initDisplayedContent() {
         if (colorDialog != null) {

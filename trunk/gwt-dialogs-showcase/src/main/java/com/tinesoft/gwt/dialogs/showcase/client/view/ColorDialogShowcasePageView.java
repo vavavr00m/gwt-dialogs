@@ -14,6 +14,11 @@ import com.tinesoft.gwt.dialogs.showcase.client.handler.ColorDialogShowcaseUiHan
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 
+/**
+ * Color dialog showcase page view.
+ * 
+ * @author Tine Kondo<kondotine@gmail.com>
+ */
 public class ColorDialogShowcasePageView extends ViewWithUiHandlers<ColorDialogShowcaseUiHandlers> implements ColorDialogShowcasePagePresenter.MyView {
 
     public interface Binder extends UiBinder<Widget, ColorDialogShowcasePageView> {

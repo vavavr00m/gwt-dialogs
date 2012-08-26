@@ -8,7 +8,6 @@ import com.google.gwt.regexp.shared.RegExp;
  * Utility class to convert colors from a representation to another.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public final class ColorUtils {
 

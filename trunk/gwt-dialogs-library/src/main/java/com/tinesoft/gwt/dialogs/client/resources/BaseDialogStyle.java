@@ -2,10 +2,9 @@
 package com.tinesoft.gwt.dialogs.client.resources;
 
 /**
- * Base CSSResource style for dialog boxes.
+ * Base CssResource style for dialog boxes.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public interface BaseDialogStyle extends BaseStyle {
 

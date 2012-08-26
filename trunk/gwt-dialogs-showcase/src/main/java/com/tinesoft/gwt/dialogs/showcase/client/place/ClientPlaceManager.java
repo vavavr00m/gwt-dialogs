@@ -12,7 +12,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
  * Client {@link com.gwtplatform.mvp.client.proxy.PlaceManager}.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ClientPlaceManager.java 3436 2011-08-18 13:03:54Z kondotine $
  */
 public class ClientPlaceManager extends PlaceManagerImpl {
 

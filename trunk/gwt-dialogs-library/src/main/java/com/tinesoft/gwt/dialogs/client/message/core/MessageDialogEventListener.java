@@ -6,7 +6,6 @@ package com.tinesoft.gwt.dialogs.client.message.core;
  * a dialog box.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public interface MessageDialogEventListener {
 

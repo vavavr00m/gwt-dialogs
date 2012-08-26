@@ -17,7 +17,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
  * </p>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: MainPageView.java 3322 2011-08-05 15:10:42Z kondotine $
  */
 public class MainPageView extends ViewImpl implements MainPagePresenter.MyView {
 

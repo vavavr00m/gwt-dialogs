@@ -11,7 +11,6 @@ import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
  * @param <T> callback result.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: DefaultAsyncCallback.java 2943 2011-07-11 08:28:16Z kondotine $
  */
 public abstract class DefaultAsyncCallback<T> implements AsyncCallback<T> {
 

@@ -16,7 +16,6 @@ import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
  * </pre>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public class ColorDialog {
 

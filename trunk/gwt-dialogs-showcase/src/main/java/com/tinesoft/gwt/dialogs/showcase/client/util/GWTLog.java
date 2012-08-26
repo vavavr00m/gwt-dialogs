@@ -8,7 +8,6 @@ import com.google.gwt.i18n.client.NumberFormat;
  * Facade to GWT-Log logging framework.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: GWTLog.java 3514 2011-09-02 12:32:19Z kondotine $
  */
 public final class GWTLog {
 

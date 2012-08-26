@@ -13,7 +13,6 @@ import com.google.inject.BindingAnnotation;
  * Error Place.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: DefaultPlace.java 2167 2011-05-04 14:51:20Z kondotine $
  */
 @BindingAnnotation
 @Target({ FIELD, PARAMETER, METHOD })

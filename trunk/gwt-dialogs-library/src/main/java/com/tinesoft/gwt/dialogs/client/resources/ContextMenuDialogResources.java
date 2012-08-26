@@ -9,7 +9,6 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
  * Client bundle for the {@link MessageDialog} css and image resources.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: ContextMenuDialogResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
 public interface ContextMenuDialogResources extends ClientBundle {
 

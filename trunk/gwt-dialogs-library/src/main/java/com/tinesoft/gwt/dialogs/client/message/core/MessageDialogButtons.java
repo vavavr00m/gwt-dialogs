@@ -7,7 +7,6 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
  * All types of buttons that can appear in a {@link MessageDialog}.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public enum MessageDialogButtons {
 

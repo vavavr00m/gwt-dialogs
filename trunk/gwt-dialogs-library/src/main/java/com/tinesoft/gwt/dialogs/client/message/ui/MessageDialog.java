@@ -20,7 +20,6 @@ import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
  * </pre>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id$
  */
 public class MessageDialog {
 
