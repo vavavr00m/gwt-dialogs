@@ -23,6 +23,8 @@ public final class NameTokens {
 
     public static final String colordialog = "!colordialog";
 
+    public static final String menudialog = "!menudialog";
+
     /**
      * Hide utility class constructor.
      */
@@ -42,5 +44,9 @@ public final class NameTokens {
 
     public static String getColordialog() {
         return colordialog;
+    }
+
+    public static String getMenudialog() {
+        return menudialog;
     }
 }

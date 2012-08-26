@@ -65,7 +65,7 @@
 	font-weight: bold;
 	height: 29px;
 	line-height: 27px;
-	margin: 0 16px 0 0;
+	margin: 2px;
 	min-width: 72px;
 	outline: 0;
 	padding: 0 8px
@@ -96,6 +96,15 @@
 }
 
 
+.notSelectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .selectedButton {
 	color: #FFFFFF !important;
 	background-color: #4D90FE !important;
@@ -109,7 +118,6 @@
 }
 
 .middle *
-{
-	
+{	
 	vertical-align: middle;
 }

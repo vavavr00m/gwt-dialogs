@@ -1,15 +1,15 @@
 
 package com.tinesoft.gwt.dialogs.client.message.core;
 
-import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 
 /**
- * All types of icons that can appear in a {@link MessageBox}.
+ * All types of icons that can appear in a {@link MessageDialog}.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id$
  */
-public enum MessageBoxIcon {
+public enum MessageDialogIcon {
 
     /**
      * The message box contain no symbols.

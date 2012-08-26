@@ -8,7 +8,7 @@ package com.tinesoft.gwt.dialogs.client.message.core;
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id$
  */
-public interface MessageBoxEventListener {
+public interface MessageDialogEventListener {
 
     /**
      * Invoked when the 'Close' button of the dialog has been clicked.

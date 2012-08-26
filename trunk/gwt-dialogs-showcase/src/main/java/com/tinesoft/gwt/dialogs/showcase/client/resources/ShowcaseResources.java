@@ -9,7 +9,7 @@ import com.google.gwt.resources.client.ImageResource;
  * Client bundle for the application css and image resources.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: MessageBoxResources.java 2722 2011-06-28 10:41:06Z kondotine $
+ * @version $Id: MessageDialogResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
 public interface ShowcaseResources extends ClientBundle {
 
@@ -30,6 +30,8 @@ public interface ShowcaseResources extends ClientBundle {
         String button();
 
         String selectedButton();
+
+        String notSelectable();
 
         String inline();
 
@@ -83,4 +85,32 @@ public interface ShowcaseResources extends ClientBundle {
      */
     @Source("images/colordialog.png")
     ImageResource colorDialogIcon();
+
+    /**
+     * 
+     * @return menu dialog image bundle
+     */
+    @Source("images/menudialog.png")
+    ImageResource menuDialogIcon();
+
+    /**
+     * 
+     * @return search image bundle
+     */
+    @Source("images/search.png")
+    ImageResource searchIcon();
+
+    /**
+     * 
+     * @return edit image bundle
+     */
+    @Source("images/edit.png")
+    ImageResource editIcon();
+
+    /**
+     * 
+     * @return delete image bundle
+     */
+    @Source("images/delete.png")
+    ImageResource deleteIcon();
 }
