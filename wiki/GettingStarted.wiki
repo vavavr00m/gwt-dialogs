@@ -1,12 +1,14 @@
-#Getting started with gwt-dialogs library.
+# Getting started with gwt-dialogs library.
 
 = Setup =
 
 First, you need to add the gwt-dialogs jar file to your project's build path.
 
 === Setting your project with Eclipse (without maven) ===
-# Right-click on the project node in the Package Explorer and select 'Build Path > Add External Archives...'. 
-# Specify the downloaded gwt-dialogs-&lt;version&gt;.jar
+
+ # Right-click on the project node in the Package Explorer and select 'Build Path > Add External Archives...'. 
+
+ # Specify the downloaded gwt-dialogs-&lt;version&gt;.jar
 
 === Setting up your project with Maven ===
 If you use Maven to build you project (what i personnaly recommend) you can easily set you project with gwt-dialogs by adding the following dependency to your *pom.xml*:
@@ -40,9 +42,9 @@ For snapshot versions of the library:
 </repository>
 }}}
 
-== Configuring your .gwt.xml Module ==
+== Configuring your  `*`.gwt.xml Module ==
 
-# Modify <Your Application>.gwt.xml to inherit the gwt-dialogs module:
+Modify <Your Application>.gwt.xml to inherit the gwt-dialogs module:
 {{{
   <inherits name='com.tinesoft.gwt.dialogs.GWTDialogs' />
 }}}
