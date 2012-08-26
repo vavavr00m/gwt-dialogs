@@ -1,0 +1,52 @@
+#Getting started with gwt-dialogs library.
+
+= Setup =
+
+First, you need to add the gwt-dialogs jar file to your project's build path.
+
+=== Setting your project with Eclipse (without maven) ===
+# Right-click on the project node in the Package Explorer and select 'Build Path > Add External Archives...'. 
+# Specify the downloaded gwt-dialogs-&lt;version&gt;.jar
+
+=== Setting up your project with Maven ===
+If you use Maven to build you project (what i personnaly recommend) you can easily set you project with gwt-dialogs by adding the following dependency to your *pom.xml*:
+
+{{{
+<dependency>
+	<groupId>com.tinesoft.gwt-dialogs</groupId>
+	<artifactId>gwt-dialogs-library</artifactId>
+	<version>1.0.0</version>
+</dependency>
+}}}
+
+The dependency is published on Sonatype maven repository. So you must add the following reposition in you repositories section:
+
+For release versions of the library:
+{{{
+<repository>
+	<id>sonatype.snapshots</id>
+	<name>Sonatype snapshot repository</name>
+        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>  
+	<layout>default</layout>
+</repository>
+}}}
+For snapshot versions of the library:
+{{{
+<repository>
+	<id>sonatype.release</id>
+	<name>Sonatype release repository</name>
+        <url>https://oss.sonatype.org/content/repositories/release/</url>
+	<layout>default</layout>
+</repository>
+}}}
+
+== Configuring your .gwt.xml Module ==
+
+# Modify <Your Application>.gwt.xml to inherit the gwt-dialogs module:
+{{{
+  <inherits name='com.tinesoft.gwt.dialogs.GWTDialogs' />
+}}}
+You will also need to download and add *gwt-dnd* (Drag Drop library). We used version 3.1.2, but it may also work with newer versions.
+{{{
+  <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
+}}}
