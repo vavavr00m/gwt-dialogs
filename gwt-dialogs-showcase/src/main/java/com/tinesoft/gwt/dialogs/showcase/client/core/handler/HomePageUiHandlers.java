@@ -12,7 +12,7 @@ import com.gwtplatform.mvp.client.UiHandlers;
 public interface HomePageUiHandlers extends UiHandlers {
 
     /**
-     * Fired on 'MessageBox' showcase click.
+     * Fired on 'MessageDialog' showcase click.
      */
     void onMessageBoxShowcaseClicked();
 
@@ -20,5 +20,10 @@ public interface HomePageUiHandlers extends UiHandlers {
      * Fired on 'ColorDialog' showcase click.
      */
     void onColorDialogShowcaseClicked();
+
+    /**
+     * Fired on 'ContextMenuDialog' showcase click.
+     */
+    void onContextMenuDialogShowcaseClicked();
 
 }

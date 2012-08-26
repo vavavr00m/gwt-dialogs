@@ -13,6 +13,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter
 import com.google.gwt.inject.client.AsyncProvider;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowcasePagePresenter;
 
 /**
  * GIN-jector configuration.
@@ -64,4 +65,6 @@ public interface ClientGinjector extends Ginjector {
     AsyncProvider<MessageBoxShowcasePagePresenter> getMessageBoxShowcasePagePresenter();
 
     AsyncProvider<ColorDialogShowcasePagePresenter> getColorDialogShowcasePagePresenter();
+
+    AsyncProvider<ContextMenuDialogShowcasePagePresenter> getContextMenuDialogPagePresenter();
 }

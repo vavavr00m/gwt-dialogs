@@ -20,6 +20,8 @@ public class ColorDialogShowcasePageView extends ViewWithUiHandlers<ColorDialogS
     }
 
     private final Widget widget;
+
+    @UiField(provided = true)
     final ShowcaseResources res;
 
     @UiField
@@ -30,8 +32,9 @@ public class ColorDialogShowcasePageView extends ViewWithUiHandlers<ColorDialogS
 
     @Inject
     public ColorDialogShowcasePageView(final Binder binder, final ShowcaseResources resources) {
-        widget = binder.createAndBindUi(this);
+
         res = resources;
+        widget = binder.createAndBindUi(this);
         pColor.getElement().getStyle().setBackgroundColor("#ff0000");
 
     }

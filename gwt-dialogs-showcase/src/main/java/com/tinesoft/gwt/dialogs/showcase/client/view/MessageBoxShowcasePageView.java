@@ -17,6 +17,7 @@ public class MessageBoxShowcasePageView extends ViewWithUiHandlers<MessageBoxSho
 
     private final Widget widget;
 
+    @UiField(provided = true)
     final ShowcaseResources res;
 
     @UiField
@@ -36,8 +37,8 @@ public class MessageBoxShowcasePageView extends ViewWithUiHandlers<MessageBoxSho
 
     @Inject
     public MessageBoxShowcasePageView(final Binder binder, final ShowcaseResources resources) {
-        widget = binder.createAndBindUi(this);
         res = resources;
+        widget = binder.createAndBindUi(this);
         initialize();
     }
 

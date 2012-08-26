@@ -1,8 +1,6 @@
 
 package com.tinesoft.gwt.dialogs.client.color.ui;
 
-import com.allen_sauer.gwt.dnd.client.PickupDragController;
-import com.allen_sauer.gwt.dnd.client.drop.DropController;
 import com.google.gwt.animation.client.Animation;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -30,7 +28,7 @@ import com.google.gwt.user.client.ui.ValueBoxBase;
 import com.google.gwt.user.client.ui.Widget;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedEvent;
 import com.tinesoft.gwt.dialogs.client.color.core.HueChangedEvent;
-import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
 import com.tinesoft.gwt.dialogs.client.util.ColorUtils;
 
@@ -126,10 +124,10 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     private final ColorDialog colorDialog;
 
     private final ColorDialogWidgetUiBinder uiBinder = GWT.create(ColorDialogWidgetUiBinder.class);
-    // helpers for adding drag & drop support on the dialog box
-    private PickupDragController dragController;
 
-    private DropController dropController;
+    // // helpers for adding drag & drop support on the dialog box
+    // private PickupDragController dragController;
+    // private DropController dropController;
 
     public ColorDialogWidget(final ColorDialog colorDialog, final ColorDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
@@ -182,7 +180,7 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Sets the title and the message that must be displayed on the {@link MessageBox}, according to
+     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according to
      * its type.
      */
     private void initDisplayedContent() {
@@ -213,7 +211,7 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Initializes the message box title, message, icon, and event handlers.
+     * Initializes the color dialog.
      */
     private void initialize() {
 

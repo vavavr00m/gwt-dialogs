@@ -4,15 +4,15 @@ package com.tinesoft.gwt.dialogs.client.resources;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource.NotStrict;
 import com.google.gwt.resources.client.ImageResource;
-import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 
 /**
- * Client bundle for the {@link MessageBox} css and image resources.
+ * Client bundle for the {@link MessageDialog} css and image resources.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
- * @version $Id: MessageBoxResources.java 2722 2011-06-28 10:41:06Z kondotine $
+ * @version $Id: MessageDialogResources.java 2722 2011-06-28 10:41:06Z kondotine $
  */
-public interface MessageBoxResources extends ClientBundle {
+public interface MessageDialogResources extends ClientBundle {
 
     interface MessageBoxStyle extends BaseDialogStyle {
 
@@ -42,7 +42,7 @@ public interface MessageBoxResources extends ClientBundle {
     /**
      * @return css bundle.
      */
-    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "MessageBoxStyle.css" })
+    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "MessageDialogStyle.css" })
     @NotStrict
     MessageBoxStyle css();
 

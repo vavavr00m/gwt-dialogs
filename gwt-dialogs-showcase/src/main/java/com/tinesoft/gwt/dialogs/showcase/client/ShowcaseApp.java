@@ -7,6 +7,7 @@ import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.gwtplatform.mvp.client.DelayedBindRegistry;
+import com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources;
 import com.tinesoft.gwt.dialogs.showcase.client.gin.ClientGinjector;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
@@ -39,7 +40,9 @@ public class ShowcaseApp implements EntryPoint {
 
         // we ensure that css are injected
         ((ShowcaseResources) GWT.create(ShowcaseResources.class)).css().ensureInjected();
-
+        // FIXME: Remove ((ContextMenuDialogResources)
+        // GWT.create(ContextMenuDialogResources.class)).css().ensureInjected();
+        ((ContextMenuDialogResources) GWT.create(ContextMenuDialogResources.class)).css().ensureInjected();
         Scheduler.get().scheduleDeferred(new Command() {
 
             @Override

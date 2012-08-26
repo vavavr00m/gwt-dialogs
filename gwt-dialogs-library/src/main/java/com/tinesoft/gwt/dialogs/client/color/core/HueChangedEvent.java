@@ -28,7 +28,7 @@ public class HueChangedEvent extends GwtEvent<HueChangedHandler> {
 
     @Override
     public GwtEvent.Type<HueChangedHandler> getAssociatedType() {
-        return TYPE;
+        return getType();
     }
 
     @Override

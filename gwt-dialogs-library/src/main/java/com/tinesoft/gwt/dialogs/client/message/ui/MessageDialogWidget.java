@@ -1,8 +1,6 @@
 
 package com.tinesoft.gwt.dialogs.client.message.ui;
 
-import com.allen_sauer.gwt.dnd.client.PickupDragController;
-import com.allen_sauer.gwt.dnd.client.drop.DropController;
 import com.google.gwt.animation.client.Animation;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -21,11 +19,11 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources;
+import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
 
-public class MessageBoxWidget extends Composite implements ClickHandler {
+public class MessageDialogWidget extends Composite implements ClickHandler {
 
-    interface MessageBoxWidgetUiBinder extends UiBinder<Widget, MessageBoxWidget> {
+    interface MessageBoxWidgetUiBinder extends UiBinder<Widget, MessageDialogWidget> {
     }
 
     private static final int DEFAULT_FADE_OUT = 500;
@@ -86,35 +84,35 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
     @UiField
     Button noButton;
 
-    final MessageBoxResources resources;
+    final MessageDialogResources resources;
 
-    private final MessageBox messageBox;
+    private final MessageDialog messageDialog;
 
     private final MessageBoxWidgetUiBinder uiBinder = GWT.create(MessageBoxWidgetUiBinder.class);
 
-    // helpers for adding drag & drop support on the dialog box
-    private PickupDragController dragController;
-    private DropController dropController;
+    // // helpers for adding drag & drop support on the dialog box
+    // private PickupDragController dragController;
+    // private DropController dropController;
 
-    public MessageBoxWidget(final MessageBox messageBox, final MessageBoxResources resources) {
+    public MessageDialogWidget(final MessageDialog messageDialog, final MessageDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
         // it must be instantiated before calling 'uiBinder.createAndBindUi(this)'
         this.resources = resources;
         initWidget(uiBinder.createAndBindUi(this));
-        this.messageBox = messageBox;
+        this.messageDialog = messageDialog;
 
         initialize();
     }
 
     /**
-     * @return the messageBox
+     * @return the messageDialog
      */
-    public MessageBox getMessageBox() {
-        return messageBox;
+    public MessageDialog getMessageBox() {
+        return messageDialog;
     }
 
     @UiFactory
-    public MessageBoxResources getResources() {
+    public MessageDialogResources getResources() {
         return resources;
     }
 
@@ -125,13 +123,13 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
             @Override
             protected void onComplete() {
                 super.onComplete();
-                MessageBoxWidget.this.setVisible(false);
-                MessageBoxWidget.this.removeFromParent();
+                MessageDialogWidget.this.setVisible(false);
+                MessageDialogWidget.this.removeFromParent();
             }
 
             @Override
             protected void onUpdate(final double progress) {
-                MessageBoxWidget.this.getElement().getStyle().setOpacity(1 - progress);
+                MessageDialogWidget.this.getElement().getStyle().setOpacity(1 - progress);
             }
         };
         fade.run(DEFAULT_FADE_OUT);
@@ -139,12 +137,12 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Initializes the buttons that must be displayed on the {@link MessageBox}, according to its
+     * Initializes the buttons that must be displayed on the {@link MessageDialog}, according to its
      * type.
      */
     private void initDisplayedButtons() {
 
-        if (messageBox != null) {
+        if (messageDialog != null) {
 
             // we first hide all the buttons
             okButton.setVisible(false);
@@ -155,13 +153,13 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
             yesButton.setVisible(false);
             noButton.setVisible(false);
 
-            switch (messageBox.getButtons()) {
+            switch (messageDialog.getButtons()) {
                 case OKCancel:
                     okButton.setVisible(true);
                     cancelButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             okButton.addStyleName(resources.css().selectedButton());
                             okButton.setFocus(true);
@@ -178,7 +176,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
                     ignoreButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             abortButton.addStyleName(resources.css().selectedButton());
                             abortButton.setFocus(true);
@@ -198,7 +196,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
                     cancelButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             retryButton.addStyleName(resources.css().selectedButton());
                             retryButton.setFocus(true);
@@ -214,7 +212,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
                     noButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             yesButton.addStyleName(resources.css().selectedButton());
                             yesButton.setFocus(true);
@@ -231,7 +229,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
                     cancelButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             yesButton.addStyleName(resources.css().selectedButton());
                             yesButton.setFocus(true);
@@ -250,7 +248,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
                     okButton.setVisible(true);
 
                     // we set the default selected button
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
                             okButton.addStyleName(resources.css().selectedButton());
                             okButton.setFocus(true);
@@ -263,24 +261,24 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Sets the title and the message that must be displayed on the {@link MessageBox}, according to
+     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according to
      * its type.
      */
     private void initDisplayedContent() {
-        if (messageBox != null) {
+        if (messageDialog != null) {
 
-            hTitle.setHTML(messageBox.getTitle());
-            hMessage.setHTML(messageBox.getMessage());
+            hTitle.setHTML(messageDialog.getTitle());
+            hMessage.setHTML(messageDialog.getMessage());
         }
 
     }
 
     /**
-     * Sets the icon that must be displayed on the {@link MessageBox}, according to its type.
+     * Sets the icon that must be displayed on the {@link MessageDialog}, according to its type.
      */
     private void initDisplayedIcon() {
-        if (messageBox != null) {
-            switch (messageBox.getIcon()) {
+        if (messageDialog != null) {
+            switch (messageDialog.getIcon()) {
                 case Information:
                     icon.setResource(resources.infoIcon());
                     break;
@@ -334,32 +332,32 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
 
     @UiHandler("abortButton")
     void onAbortButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onAbortButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onAbortButtonClicked();
             hide();
         }
     }
 
     @UiHandler("cancelButton")
     void onCancelButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onCancelButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onCancelButtonClicked();
             hide();
         }
     }
 
     @Override
     public void onClick(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onCloseButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onCloseButtonClicked();
             hide();
         }
     }
 
     @UiHandler("iClose")
     public void onCloseClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onCloseButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onCloseButtonClicked();
             hide();
         }
     }
@@ -374,82 +372,82 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
     }
 
     protected void onEnterKeyDown() {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
 
-            switch (messageBox.getButtons()) {
+            switch (messageDialog.getButtons()) {
                 case OKCancel:
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onOkButtonClicked();
+                            messageDialog.getListener().onOkButtonClicked();
                             hide();
                             break;
                         case Button2:
-                            messageBox.getListener().onCancelButtonClicked();
+                            messageDialog.getListener().onCancelButtonClicked();
                             hide();
                             break;
                     }
                     break;
                 case AbortRetryIgnore:
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onAbortButtonClicked();
+                            messageDialog.getListener().onAbortButtonClicked();
                             hide();
                             break;
                         case Button2:
-                            messageBox.getListener().onRetryButtonClicked();
+                            messageDialog.getListener().onRetryButtonClicked();
                             hide();
                             break;
                         case Button3:
-                            messageBox.getListener().onIgnoreButtonClicked();
+                            messageDialog.getListener().onIgnoreButtonClicked();
                             hide();
                             break;
                     }
                     break;
                 case RetryCancel:
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onRetryButtonClicked();
+                            messageDialog.getListener().onRetryButtonClicked();
                             hide();
                             break;
                         case Button2:
-                            messageBox.getListener().onCancelButtonClicked();
+                            messageDialog.getListener().onCancelButtonClicked();
                             hide();
                             break;
                     }
                     break;
                 case YesNo:
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onYesButtonClicked();
+                            messageDialog.getListener().onYesButtonClicked();
                             hide();
                             break;
                         case Button2:
-                            messageBox.getListener().onNoButtonClicked();
+                            messageDialog.getListener().onNoButtonClicked();
                             hide();
                             break;
                     }
                     break;
                 case YesNoCancel:
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onYesButtonClicked();
+                            messageDialog.getListener().onYesButtonClicked();
                             hide();
                             break;
                         case Button2:
-                            messageBox.getListener().onNoButtonClicked();
+                            messageDialog.getListener().onNoButtonClicked();
                             hide();
                             break;
                         case Button3:
-                            messageBox.getListener().onCancelButtonClicked();
+                            messageDialog.getListener().onCancelButtonClicked();
                             hide();
                             break;
                     }
                     break;
                 default:
 
-                    switch (messageBox.getDefaultButton()) {
+                    switch (messageDialog.getDefaultButton()) {
                         case Button1:
-                            messageBox.getListener().onOkButtonClicked();
+                            messageDialog.getListener().onOkButtonClicked();
                             hide();
                             break;
                     }
@@ -459,48 +457,48 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
     }
 
     protected void onEscapeKeyDown() {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onCloseButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onCloseButtonClicked();
             hide();
         }
     }
 
     @UiHandler("ignoreButton")
     void onIgnoreButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onIgnoreButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onIgnoreButtonClicked();
             hide();
         }
     }
 
     @UiHandler("noButton")
     void onNoButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onNoButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onNoButtonClicked();
             hide();
         }
     }
 
     @UiHandler("okButton")
     void onOkButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onOkButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onOkButtonClicked();
             hide();
         }
     }
 
     @UiHandler("retryButton")
     void onRetryButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onRetryButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onRetryButtonClicked();
             hide();
         }
     }
 
     @UiHandler("yesButton")
     void onYesButtonClicked(final ClickEvent event) {
-        if ((messageBox != null) && (messageBox.getListener() != null)) {
-            messageBox.getListener().onYesButtonClicked();
+        if ((messageDialog != null) && (messageDialog.getListener() != null)) {
+            messageDialog.getListener().onYesButtonClicked();
             hide();
         }
     }
@@ -515,7 +513,7 @@ public class MessageBoxWidget extends Composite implements ClickHandler {
 
             @Override
             protected void onUpdate(final double progress) {
-                MessageBoxWidget.this.getElement().getStyle().setOpacity(progress);
+                MessageDialogWidget.this.getElement().getStyle().setOpacity(progress);
             }
         };
         fade.run(DEFAULT_FADE_IN);

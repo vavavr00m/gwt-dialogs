@@ -2,8 +2,10 @@
 package com.tinesoft.gwt.dialogs.showcase.client.gin;
 
 import com.gwtplatform.dispatch.shared.SecurityCookie;
+import com.gwtplatform.mvp.client.annotations.GaAccount;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
+import com.gwtplatform.mvp.client.googleanalytics.GoogleAnalyticsNavigationTracker;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.ErrorPagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.HomePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
@@ -14,11 +16,13 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.ClientPlaceManager;
 import com.tinesoft.gwt.dialogs.showcase.client.place.DefaultPlace;
 import com.tinesoft.gwt.dialogs.showcase.client.place.ErrorPlace;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
-import com.tinesoft.gwt.dialogs.showcase.shared.Config;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ColorDialogShowcasePagePresenter;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.ContextMenuDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageBoxShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.view.ColorDialogShowcasePageView;
+import com.tinesoft.gwt.dialogs.showcase.client.view.ContextMenuDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.client.view.MessageBoxShowcasePageView;
+import com.tinesoft.gwt.dialogs.showcase.shared.Config;
 
 /**
  * Client GIN-jector module.
@@ -38,6 +42,11 @@ public class ClientModule extends AbstractPresenterModule {
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
         bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.error);
 
+        // Google Analytics
+        // bind(GoogleAnalytics.class).to(GoogleAnalyticsImpl.class).in(Singleton.class);
+        bindConstant().annotatedWith(GaAccount.class).to(Config.GOOGLE_ANALYTICS_TRACKING_ID);
+        bind(GoogleAnalyticsNavigationTracker.class).asEagerSingleton();
+
         // ========== //
         // Presenters //
         // ========== //
@@ -51,7 +60,6 @@ public class ClientModule extends AbstractPresenterModule {
         bindPresenter(HomePagePresenter.class, HomePagePresenter.MyView.class, HomePageView.class,
                       HomePagePresenter.MyProxy.class);
 
-
         bindPresenter(MessageBoxShowcasePagePresenter.class,
                       MessageBoxShowcasePagePresenter.MyView.class,
                       MessageBoxShowcasePageView.class,
@@ -61,5 +69,10 @@ public class ClientModule extends AbstractPresenterModule {
                       ColorDialogShowcasePagePresenter.MyView.class,
                       ColorDialogShowcasePageView.class,
                       ColorDialogShowcasePagePresenter.MyProxy.class);
+
+        bindPresenter(ContextMenuDialogShowcasePagePresenter.class,
+                      ContextMenuDialogShowcasePagePresenter.MyView.class,
+                      ContextMenuDialogShowcasePageView.class,
+                      ContextMenuDialogShowcasePagePresenter.MyProxy.class);
     }
 }

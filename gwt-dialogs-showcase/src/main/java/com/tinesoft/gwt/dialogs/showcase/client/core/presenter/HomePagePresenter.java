@@ -50,4 +50,10 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
         placeManager.revealPlace(new PlaceRequest(NameTokens.colordialog));
 
     }
+
+    @Override
+    public void onContextMenuDialogShowcaseClicked() {
+        placeManager.revealPlace(new PlaceRequest(NameTokens.menudialog));
+
+    }
 }

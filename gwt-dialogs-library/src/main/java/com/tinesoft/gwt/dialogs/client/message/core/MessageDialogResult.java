@@ -7,7 +7,7 @@ package com.tinesoft.gwt.dialogs.client.message.core;
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id$
  */
-public enum MessageBoxResult {
+public enum MessageDialogResult {
 
     /**
      * Nothing is returned from the dialog box. This means that the modal dialog continues running.

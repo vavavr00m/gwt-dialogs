@@ -2,12 +2,12 @@
 package com.tinesoft.gwt.dialogs.client.message.ui;
 
 import com.google.gwt.core.client.GWT;
-import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxButtons;
-import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxDefaultButton;
-import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxEventAdapter;
-import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxEventListener;
-import com.tinesoft.gwt.dialogs.client.message.core.MessageBoxIcon;
-import com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogButtons;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogDefaultButton;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogEventAdapter;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogEventListener;
+import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogIcon;
+import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
 
 /**
  * Displays message boxes on screen.
@@ -16,13 +16,13 @@ import com.tinesoft.gwt.dialogs.client.resources.MessageBoxResources;
  * </p>
  * 
  * <pre>
- * (MessageBoxResources) GWT.create(MessageBoxResources.class)).css().ensureInjected();
+ * (MessageDialogResources) GWT.create(MessageDialogResources.class)).css().ensureInjected();
  * </pre>
  * 
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id$
  */
-public class MessageBox {
+public class MessageDialog {
 
     /**
      * Shows the question message dialog.
@@ -30,8 +30,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void ask(final String message) {
-        show("", message, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show("", message, MessageDialogButtons.YesNo, MessageDialogIcon.Question,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     /**
@@ -41,8 +41,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void ask(final String title, final String message) {
-        show(title, message, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show(title, message, MessageDialogButtons.YesNo, MessageDialogIcon.Question,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     /**
@@ -51,9 +51,9 @@ public class MessageBox {
      * @param title the title to the message dialog.
      * @param message the text to display.
      */
-    public static void ask(final String title, final String message, final MessageBoxEventListener listener) {
-        show(title, message, MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-             MessageBoxDefaultButton.None, listener);
+    public static void ask(final String title, final String message, final MessageDialogEventListener listener) {
+        show(title, message, MessageDialogButtons.YesNo, MessageDialogIcon.Question,
+             MessageDialogDefaultButton.None, listener);
     }
 
     /**
@@ -62,8 +62,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void error(final String message) {
-        show("", message, MessageBoxButtons.OK, MessageBoxIcon.Error,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show("", message, MessageDialogButtons.OK, MessageDialogIcon.Error,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     /**
@@ -73,8 +73,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void error(final String title, final String message) {
-        show(title, message, MessageBoxButtons.OK, MessageBoxIcon.Error,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show(title, message, MessageDialogButtons.OK, MessageDialogIcon.Error,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     /**
@@ -84,8 +84,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void inform(final String message) {
-        show("", message, MessageBoxButtons.OK, MessageBoxIcon.Information,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show("", message, MessageDialogButtons.OK, MessageDialogIcon.Information,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
 
     }
 
@@ -95,8 +95,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void inform(final String title, final String message) {
-        show(title, message, MessageBoxButtons.OK, MessageBoxIcon.Information,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show(title, message, MessageDialogButtons.OK, MessageDialogIcon.Information,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
 
     }
 
@@ -108,10 +108,10 @@ public class MessageBox {
      * @param buttons the buttons to display.
      * @param icon the icon to display
      * @param defaultButton the default selected button
-     * @param listener the listener to handle events on the MessageBox (button clicked, ...).
+     * @param listener the listener to handle events on the MessageDialog (button clicked, ...).
      */
-    public static void show(final String title, final String message, final MessageBoxButtons buttons, final MessageBoxIcon icon, final MessageBoxDefaultButton defaultButton, final MessageBoxEventListener listener) {
-        new MessageBox(title, message, buttons, icon, defaultButton, listener).show();
+    public static void show(final String title, final String message, final MessageDialogButtons buttons, final MessageDialogIcon icon, final MessageDialogDefaultButton defaultButton, final MessageDialogEventListener listener) {
+        new MessageDialog(title, message, buttons, icon, defaultButton, listener).show();
     }
 
     /**
@@ -120,8 +120,8 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void warn(final String message) {
-        show("", message, MessageBoxButtons.OK, MessageBoxIcon.Warning,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show("", message, MessageDialogButtons.OK, MessageDialogIcon.Warning,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     /**
@@ -131,27 +131,27 @@ public class MessageBox {
      * @param message the text to display.
      */
     public static void warn(final String title, final String message) {
-        show(title, message, MessageBoxButtons.OK, MessageBoxIcon.Warning,
-             MessageBoxDefaultButton.Button1, new MessageBoxEventAdapter() {});
+        show(title, message, MessageDialogButtons.OK, MessageDialogIcon.Warning,
+             MessageDialogDefaultButton.Button1, new MessageDialogEventAdapter() {});
     }
 
     private final String title;
     private final String message;
-    private final MessageBoxButtons buttons;
-    private final MessageBoxIcon icon;
-    private final MessageBoxDefaultButton defaultButton;
-    private final MessageBoxWidget messageBoxWidget;
-    private final MessageBoxEventListener listener;
+    private final MessageDialogButtons buttons;
+    private final MessageDialogIcon icon;
+    private final MessageDialogDefaultButton defaultButton;
+    private final MessageDialogWidget messageDialogWidget;
+    private final MessageDialogEventListener listener;
 
-    private static MessageBoxResources resources;
+    private static MessageDialogResources resources;
 
     /**
      * @return the resources
      */
-    public static MessageBoxResources getResources() {
+    public static MessageDialogResources getResources() {
         if (resources == null) {
             // we set the resources to the default one
-            resources = GWT.create(MessageBoxResources.class);
+            resources = GWT.create(MessageDialogResources.class);
             // we make sure that the new css style is injected
             resources.css().ensureInjected();
         }
@@ -161,8 +161,8 @@ public class MessageBox {
     /**
      * @param resources the resources to set
      */
-    public static void setResources(final MessageBoxResources resources) {
-        MessageBox.resources = resources;
+    public static void setResources(final MessageDialogResources resources) {
+        MessageDialog.resources = resources;
     }
 
     /**
@@ -173,9 +173,9 @@ public class MessageBox {
      * @param buttons the buttons to display.
      * @param icon the icon to display
      * @param defaultButton the default selected button
-     * @param listener the listener to handle events on the MessageBox (button clicked, ...).
+     * @param listener the listener to handle events on the MessageDialog (button clicked, ...).
      */
-    private MessageBox(final String title, final String message, final MessageBoxButtons buttons, final MessageBoxIcon icon, final MessageBoxDefaultButton defaultButton, final MessageBoxEventListener listener) {
+    private MessageDialog(final String title, final String message, final MessageDialogButtons buttons, final MessageDialogIcon icon, final MessageDialogDefaultButton defaultButton, final MessageDialogEventListener listener) {
         this.title = title;
         this.message = message;
         this.buttons = buttons;
@@ -183,37 +183,37 @@ public class MessageBox {
         this.defaultButton = defaultButton;
         this.listener = listener;
 
-        messageBoxWidget = new MessageBoxWidget(this, getResources());
+        messageDialogWidget = new MessageDialogWidget(this, getResources());
 
     }
 
     /**
      * @return the buttons
      */
-    public MessageBoxButtons getButtons() {
+    public MessageDialogButtons getButtons() {
         return buttons;
     }
 
     /**
      * @return the defaultButton
      */
-    public MessageBoxDefaultButton getDefaultButton() {
+    public MessageDialogDefaultButton getDefaultButton() {
         return defaultButton;
     }
 
     /**
      * @return the icon
      */
-    public MessageBoxIcon getIcon() {
+    public MessageDialogIcon getIcon() {
         return icon;
     }
 
     /**
-     * Returns the {@link MessageBoxEventListener} associated with this {@link MessageBox}.
+     * Returns the {@link MessageDialogEventListener} associated with this {@link MessageDialog}.
      * 
-     * @return the {@link MessageBoxEventListener} associated with this {@link MessageBox}.
+     * @return the {@link MessageDialogEventListener} associated with this {@link MessageDialog}.
      */
-    public MessageBoxEventListener getListener() {
+    public MessageDialogEventListener getListener() {
         return listener;
     }
 
@@ -232,7 +232,7 @@ public class MessageBox {
     }
 
     private void show() {
-        messageBoxWidget.show();
+        messageDialogWidget.show();
     }
 
 }

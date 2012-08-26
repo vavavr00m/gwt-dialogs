@@ -14,7 +14,7 @@
 			<h1>GWT Dialogs Showcase</h1>
 		</g:HTMLPanel>
 
-		<g:FlowPanel styleName="{res.css.clear}">
+		<g:FlowPanel addStyleNames="{res.css.clear} {res.css.notSelectable}">
 			<g:FlowPanel styleName="{res.css.left}">
 				<g:FlowPanel ui:field="messageBoxShowcase" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
@@ -37,6 +37,21 @@
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">ColorDialog Showcase</g:Label>
 						<g:Label styleName="{res.css.content}">demonstrates the color dialog that allows you to pick up a color.</g:Label>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
+				</g:FlowPanel>
+			</g:FlowPanel>
+			
+			<g:FlowPanel styleName="{res.css.clear}"/>
+			
+			<g:FlowPanel styleName="{res.css.left}">
+				<g:FlowPanel ui:field="menuDialogShowcase" styleName="{res.css.container}">
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Image resource="{res.menuDialogIcon}"></g:Image>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Label styleName="{res.css.title}">ContextMenuDialog Showcase</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the context menu dialog that allows you to display context menus.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
 				</g:FlowPanel>

@@ -10,7 +10,7 @@ import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
-import com.tinesoft.gwt.dialogs.client.message.ui.MessageBox;
+import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.MainPagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.handler.MessageBoxShowcaseUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
@@ -43,24 +43,24 @@ public class MessageBoxShowcasePagePresenter extends Presenter<MessageBoxShowcas
 
     @Override
     public void onInfoMessageBoxClicked() {
-        MessageBox.inform("Information", LOREM_IPSUM);
+        MessageDialog.inform("Information", LOREM_IPSUM);
     }
 
     @Override
     public void onQuestionMessageBoxClicked() {
-        MessageBox.ask("Question", LOREM_IPSUM);
+        MessageDialog.ask("Question", LOREM_IPSUM);
 
     }
 
     @Override
     public void onWarnMessageBoxClicked() {
-        MessageBox.warn("Warning", LOREM_IPSUM);
+        MessageDialog.warn("Warning", LOREM_IPSUM);
 
     }
 
     @Override
     public void onErrorMessageBoxClicked() {
-        MessageBox.error("Error", LOREM_IPSUM);
+        MessageDialog.error("Error", LOREM_IPSUM);
 
     }
 }
