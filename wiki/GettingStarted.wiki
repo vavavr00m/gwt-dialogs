@@ -1,4 +1,3 @@
-#sidebar GettingStarted
 # Getting started with gwt-dialogs library.
 
 = Setup =
