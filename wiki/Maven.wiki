@@ -1,3 +1,4 @@
+#labels Featured
 #How to integrate gwt-dialogs library into a Maven project
 
 = Repository =
