@@ -2,32 +2,25 @@
 #How to integrate gwt-dialogs library into a Maven project
 
 = Repository =
-If you use Maven to build you project (what i personnaly recommend) you can easily set you project with gwt-dialogs by adding the following dependency to your pom.xml:
+If you use Maven to build your project (what i personally recommend) you can easily set your project with gwt-dialogs by adding the following dependency to your pom.xml:
 {{{
 <dependency>
-        <groupId>com.tinesoft.gwt-dialogs</groupId>
+        <groupId>com.tinesoft</groupId>
         <artifactId>gwt-dialogs-library</artifactId>
         <version>1.0.0</version>
 </dependency>
 }}}
 
-The dependency is published on Sonatype maven repository. So you must add the following reposition in you repositories section:
+The depencency will soon be published on Maven Central.
 
-For release versions of the library:
+But until then, and if you want to use a snapshot (=still in development) version of the library, you must add the following reposition in you repositories section:
+
+For snaphsots versions of the library, you must add the following in the *`<`repositories`>`* section of your pom.xml:
 {{{
 <repository>
         <id>sonatype.snapshots</id>
         <name>Sonatype snapshot repository</name>
         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>  
-        <layout>default</layout>
-</repository>
-}}}
-For snapshot versions of the library:
-{{{
-<repository>
-        <id>sonatype.release</id>
-        <name>Sonatype release repository</name>
-        <url>https://oss.sonatype.org/content/repositories/release/</url>
         <layout>default</layout>
 </repository>
 }}}
