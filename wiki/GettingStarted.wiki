@@ -61,3 +61,21 @@ MessageDialog.error("Your error message.");
 //Ask a question
 MessageDialog.ask("Your question message.");
 }}}
+
+
+== Using the ColorDialog ==
+
+Simple usage:
+{{{
+
+
+ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEventAdapter() {
+
+            @Override
+            public void onOkButtonClicked() {
+                 String pickedColor = ColorDialog.getColor();
+                 //do something with the color ...
+            }
+        });
+
+}}}
