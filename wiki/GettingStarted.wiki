@@ -100,7 +100,7 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
 <g:FlowPanel>
   <my:ContextMenuDialogWidget triggerMode="onMouseOver">
       <my:target>
-          <g:Button ui:field="overMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
+          <g:Button ui:field="overMenuButton">
               <ui:msg description="Over Menu button">Mouse over to see the context menu...</ui:msg>
           </g:Button>     
       </my:target>
@@ -123,6 +123,14 @@ xmlns:my='urn:import:com.tinesoft.gwt.dialogs.client.menu.ui'
 }}}
  * Add the context menu dialog widget
    * define how the menu dialog appears by setting the `triggerMode`
+   * define which to which widget will the menu be associated (the *target*):
+{{{
+<my:target>
+    <g:Button ui:field="overMenuButton">
+        <ui:msg description="Over Menu button">Mouse over to see the context menu...</ui:msg>
+    </g:Button>     
+</my:target>
+}}}
    * add menu items: Each menu item can have an icon and a text.
 
 
