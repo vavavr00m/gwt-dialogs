@@ -145,7 +145,7 @@ MenuItemWidget editMenuItem;
 @UiHandler("editMenuItem")
 void onEditMenuItemClicked(MenuItemClickEvent event)
 {
-     //do something
+     //the menu item has been clicked, do something...
 }
 
 }}}
