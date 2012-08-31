@@ -79,3 +79,41 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
         });
 
 }}}
+
+== Using the ContextMenuDialog ==
+
+=== With UiBinder ===
+*MyView.ui.xml:*
+{{{
+...
+  <my:ContextMenuDialogWidget triggerMode="onMouseOver">
+      <my:target>
+          <g:Button ui:field="overMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
+              <ui:msg description="Over Menu button">Mouse over to see the context menu...</ui:msg>
+          </g:Button>     
+      </my:target>
+      <my:menuitem><my:MenuItemWidget icon="{res.editIcon}" text="Menu item 1" ui:field="editMenuItem"/></my:menuitem>
+      <my:menuitem><my:MenuItemWidget icon="{res.searchIcon}" text="Menu item 2"  ui:field="searchMenuItem"/></my:menuitem>
+      <my:menuitem><my:MenuItemWidget icon="{res.deleteIcon}" text="Menu item 3"  ui:field="deleteMenuItem"/></my:menuitem>
+      <my:separator/>
+      <my:menuitem><my:MenuItemWidget  text="Menu item 4"/></my:menuitem>
+  </my:ContextMenuDialogWidget>
+
+...
+}}}
+
+*MyView.java:*
+{{{
+...
+@UiField
+MenuItemWidget editMenuItem;
+...
+
+//Event Handlers
+@UiHandler("editMenuItem")
+void onEditMenuItemClicked(MenuItemClick event)
+{
+     //do something
+}
+
+}}}
