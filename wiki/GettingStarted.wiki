@@ -95,6 +95,8 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
     ui:generateLocales='default'>
 
 <ui:with type="com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources" field="res" />
+
+
 <g:FlowPanel>
   <my:ContextMenuDialogWidget triggerMode="onMouseOver">
       <my:target>
@@ -112,6 +114,13 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
 <ui:Uibinder>
 
 }}}
+
+*Explanation:*
+
+ * Define the namespace prefix for widgets used to build the menu dialog. Here i have chosen *my* as prefix, and the package containing the widgets is *com.tinesoft.gwt.dialogs.client.menu.ui*. So the namespace definiation is:  `xmlns:my='urn:import:com.tinesoft.gwt.dialogs.client.menu.ui'`
+ * Add the context menu dialog widget
+   * define how the menu dialog appears by setting the `triggerMode`
+   * add menu items: Each menu item can have an icon and a text.
 
 
 *MyView.java:*
