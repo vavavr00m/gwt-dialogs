@@ -94,8 +94,8 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
     ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
     ui:generateLocales='default'>
 
-<ui:with        type="com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources" field="res" />
-...
+<ui:with type="com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources" field="res" />
+<g:FlowPanel>
   <my:ContextMenuDialogWidget triggerMode="onMouseOver">
       <my:target>
           <g:Button ui:field="overMenuButton" addStyleNames="{res.css.button} {res.css.selectedButton}">
@@ -108,7 +108,7 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
       <my:separator/>
       <my:menuitem><my:MenuItemWidget  text="Menu item 4"/></my:menuitem>
   </my:ContextMenuDialogWidget>
-...
+</g:FlowPanel>
 <ui:Uibinder>
 
 }}}
