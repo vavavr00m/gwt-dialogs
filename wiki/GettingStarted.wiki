@@ -111,7 +111,7 @@ MenuItemWidget editMenuItem;
 
 //Event Handlers
 @UiHandler("editMenuItem")
-void onEditMenuItemClicked(MenuItemClick event)
+void onEditMenuItemClicked(MenuItemClickEvent event)
 {
      //do something
 }
