@@ -22,7 +22,7 @@ If you use Maven to build you project (what i personnaly recommend) you can easi
 }}}
 
 
-The depencency will soon be published on Maven Central. So nothing more is required.
+The depencency will soon be published on Maven Central. So nothing more is required to have it working.
 
 But until then, and if you want to use a snapshot (= under development) version of the library, you must add the following in the *`<`repositories`>`* section of your pom.xml:
 {{{
