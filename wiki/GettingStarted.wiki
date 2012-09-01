@@ -8,7 +8,7 @@ First, you need to add the gwt-dialogs jar file to your project's build path.
 === Setting your project with Eclipse (without maven) ===
 
  # Right-click on the project node in the Package Explorer and select 'Build Path > Add External Archives...'.
- # Specify the downloaded gwt-dialogs-&lt;version&gt;.jar
+ # Specify the downloaded gwt-dialogs-`<`version`>`.jar
 
 === Setting up your project with Maven ===
 If you use Maven to build you project (what i personnaly recommend) you can easily set you project with gwt-dialogs by adding the following dependency to your *pom.xml*:
