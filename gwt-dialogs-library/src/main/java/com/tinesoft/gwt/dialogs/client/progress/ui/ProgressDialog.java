@@ -20,6 +20,15 @@ import com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources;
 public class ProgressDialog {
 
     /**
+     * Dismisses the progress dialog.
+     */
+    public static void dismiss() {
+        if (null != dialog && null != dialog.progressDialogWidget) {
+            dialog.progressDialogWidget.hide();
+        }
+    }
+
+    /**
      * Shows a progress dialog.
      * 
      * @param title the title of the message dialog.
@@ -27,7 +36,8 @@ public class ProgressDialog {
      * @param listener the listener to handle events on the ProgressDialog (button clicked, ...).
      */
     public static void show(final String title, final String message, final ProgressDialogEventListener listener) {
-        new ProgressDialog(title, message, false, listener).show();
+        dialog = new ProgressDialog(title, message, false, listener);
+        dialog.show();
     }
 
     /**
@@ -40,7 +50,8 @@ public class ProgressDialog {
      * @param listener the listener to handle events on the ProgressDialog (button clicked, ...).
      */
     public static void show(final String title, final String message, final boolean isCancelButtonVisible, final ProgressDialogEventListener listener) {
-        new ProgressDialog(title, message, isCancelButtonVisible, listener).show();
+        dialog = new ProgressDialog(title, message, isCancelButtonVisible, listener);
+        dialog.show();
     }
 
     private final String title;
@@ -49,6 +60,7 @@ public class ProgressDialog {
     private final ProgressDialogWidget progressDialogWidget;
     private final ProgressDialogEventListener listener;
 
+    private static ProgressDialog dialog;
     private static ProgressDialogResources resources;
 
     /**

@@ -128,6 +128,7 @@ public class ProgressDialogWidget extends Composite implements ClickHandler {
 
             cancelButton.addStyleName(resources.css().selectedButton());
             cancelButton.setVisible(progressDialog.isCancelButtonVisible());
+            iClose.setVisible(progressDialog.isCancelButtonVisible());
         }
 
     }
