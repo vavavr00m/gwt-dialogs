@@ -2,6 +2,7 @@
 package com.tinesoft.gwt.dialogs.client.color.ui;
 
 import com.google.gwt.core.client.GWT;
+import com.tinesoft.gwt.dialogs.client.color.core.ColorDialogEventAdapter;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorDialogEventListener;
 import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
 
@@ -18,6 +19,8 @@ import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
  * @author Tine Kondo<kondotine@gmail.com>
  */
 public class ColorDialog {
+
+    private static String color;
 
     /**
      * @return the resources
@@ -51,7 +54,26 @@ public class ColorDialog {
         new ColorDialog(title, message, defaultColor, listener).show();
     }
 
-    private static String color;
+    /**
+     * Shows the color dialog box.
+     * 
+     * @param title the title of the color dialog box.
+     * @param message the message of the color dialog box.
+     * @param defaultColor the default selected color.
+     */
+    public static void show(final String title, final String message, final String defaultColor) {
+        new ColorDialog(title, message, defaultColor, new ColorDialogEventAdapter() {}).show();
+    }
+
+    /**
+     * Shows the color dialog box.
+     * 
+     * @param message the message of the color dialog box.
+     * @param defaultColor the default selected color.
+     */
+    public static void show(final String message, final String defaultColor) {
+        new ColorDialog("", message, defaultColor, new ColorDialogEventAdapter() {}).show();
+    }
 
     private final String title;
 
@@ -62,6 +84,20 @@ public class ColorDialog {
     private final ColorDialogEventListener listener;
 
     private static ColorDialogResources resources;
+
+    /**
+     * @return the color
+     */
+    public static String getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public static void setColor(final String color) {
+        ColorDialog.color = color;
+    }
 
     /**
      * Constructor.
@@ -77,20 +113,6 @@ public class ColorDialog {
         this.listener = listener;
         colorDialogWidget = new ColorDialogWidget(this, getResources());
         colorDialogWidget.setColor(defaultColor);
-    }
-
-    /**
-     * @return the color
-     */
-    public static String getColor() {
-        return color;
-    }
-
-    /**
-     * @param color the color to set
-     */
-    public static void setColor(String color) {
-        ColorDialog.color = color;
     }
 
     /**

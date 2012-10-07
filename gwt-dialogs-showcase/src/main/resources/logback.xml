@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- @author Tine Kondo<kondotine@gmail.com> -->
-<!-- @version $Id: logback.xml 2900 2011-07-06 16:50:50Z kondotine $ -->
-
 <configuration debug="false">
 
-	<property name="LOGS_DIR" value="${catalina.home}/logs/gwt-dialogs-sample" />
+	<property name="LOGS_DIR" value="${catalina.home}/logs/gwt-dialogs-showcase" />
 	<property name="LOGS_ARCHIVE_DIR" value="${LOGS_DIR}/archive" />
 
 	<appender name="log-file-info" class="ch.qos.logback.core.rolling.RollingFileAppender">

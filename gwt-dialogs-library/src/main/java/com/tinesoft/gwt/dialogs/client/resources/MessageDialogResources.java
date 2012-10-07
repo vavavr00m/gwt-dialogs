@@ -1,7 +1,6 @@
 
 package com.tinesoft.gwt.dialogs.client.resources;
 
-import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource.NotStrict;
 import com.google.gwt.resources.client.ImageResource;
 import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
@@ -11,7 +10,7 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
  * 
  * @author Tine Kondo<kondotine@gmail.com>
  */
-public interface MessageDialogResources extends ClientBundle {
+public interface MessageDialogResources extends BaseDialogResources {
 
     interface MessageDialogStyle extends BaseDialogStyle {
 
@@ -23,20 +22,6 @@ public interface MessageDialogResources extends ClientBundle {
      */
     @Source("images/ask.png")
     ImageResource askIcon();
-
-    /**
-     * 
-     * @return background image bundle for dialog box.
-     */
-    @Source("images/background.png")
-    ImageResource backgroundImage();
-
-    /**
-     * 
-     * @return close image bundle.
-     */
-    @Source("images/close-x.png")
-    ImageResource closeIcon();
 
     /**
      * @return css bundle.

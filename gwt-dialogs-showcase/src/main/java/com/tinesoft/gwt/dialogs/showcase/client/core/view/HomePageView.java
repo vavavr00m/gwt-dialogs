@@ -33,6 +33,9 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
     @UiField
     FlowPanel menuDialogShowcase;
 
+    @UiField
+    FlowPanel progressDialogShowcase;
+
     public interface Binder extends UiBinder<Widget, HomePageView> {
     }
 
@@ -75,6 +78,16 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
                     getUiHandlers().onContextMenuDialogShowcaseClicked();
+                }
+            }
+        }, ClickEvent.getType());
+
+        progressDialogShowcase.addDomHandler(new ClickHandler() {
+
+            @Override
+            public void onClick(final ClickEvent event) {
+                if (null != getUiHandlers()) {
+                    getUiHandlers().onProgressDialogShowcaseClicked();
                 }
             }
         }, ClickEvent.getType());

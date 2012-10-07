@@ -23,13 +23,14 @@
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">MessageDialog Showcase</g:Label>
-						<g:Label styleName="{res.css.content}">demonstrates the standard dialogs that allows you to display messages (error, warning,
-						information,...)</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the standard dialogs that
+							allows you to display messages (error, warning,
+							information,...)</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
 				</g:FlowPanel>
 			</g:FlowPanel>
-			
+
 			<g:FlowPanel styleName="{res.css.left}">
 				<g:FlowPanel ui:field="colorDialogShowcase" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
@@ -37,14 +38,15 @@
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">ColorDialog Showcase</g:Label>
-						<g:Label styleName="{res.css.content}">demonstrates the color dialog that allows you to pick up a color.</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the color dialog that
+							allows you to pick up a color.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
 				</g:FlowPanel>
 			</g:FlowPanel>
-			
-			<g:FlowPanel styleName="{res.css.clear}"/>
-			
+
+			<g:FlowPanel styleName="{res.css.clear}" />
+
 			<g:FlowPanel styleName="{res.css.left}">
 				<g:FlowPanel ui:field="menuDialogShowcase" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
@@ -52,11 +54,29 @@
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Label styleName="{res.css.title}">ContextMenuDialog Showcase</g:Label>
-						<g:Label styleName="{res.css.content}">demonstrates the context menu dialog that allows you to display context menus.</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the context menu dialog
+							that allows you to display context menus.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
 				</g:FlowPanel>
 			</g:FlowPanel>
+			
+			<g:FlowPanel styleName="{res.css.left}">
+				<g:FlowPanel ui:field="progressDialogShowcase"
+					styleName="{res.css.container}">
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Image resource="{res.progressDialogIcon}"></g:Image>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.left}">
+						<g:Label styleName="{res.css.title}">ProgressDialog Showcase</g:Label>
+						<g:Label styleName="{res.css.content}">demonstrates the progress dialog that
+							allows you to show progress.</g:Label>
+					</g:FlowPanel>
+					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
+				</g:FlowPanel>
+			</g:FlowPanel>
+
+			<g:FlowPanel styleName="{res.css.clear}" />
 		</g:FlowPanel>
 	</g:FlowPanel>
 </ui:UiBinder>

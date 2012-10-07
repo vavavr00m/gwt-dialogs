@@ -17,6 +17,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
 /**
  * Message dialog page presenter.
+ * 
  * @author Tine Kondo<kondotine@gmail.com>
  */
 public class MessageDialogShowcasePagePresenter extends Presenter<MessageDialogShowcasePagePresenter.MyView, MessageDialogShowcasePagePresenter.MyProxy> implements MessageDialogShowcaseUiHandlers {
@@ -30,7 +31,7 @@ public class MessageDialogShowcasePagePresenter extends Presenter<MessageDialogS
     }
 
     @ProxyCodeSplit
-    @NameToken(NameTokens.messagebox)
+    @NameToken(NameTokens.messagedialog)
     public interface MyProxy extends ProxyPlace<MessageDialogShowcasePagePresenter> {
     }
 
@@ -46,24 +47,24 @@ public class MessageDialogShowcasePagePresenter extends Presenter<MessageDialogS
     }
 
     @Override
-    public void onInfoMessageBoxClicked() {
+    public void onInfoMessageDialogClicked() {
         MessageDialog.inform("Information", LOREM_IPSUM);
     }
 
     @Override
-    public void onQuestionMessageBoxClicked() {
+    public void onQuestionMessageDialogClicked() {
         MessageDialog.ask("Question", LOREM_IPSUM);
 
     }
 
     @Override
-    public void onWarnMessageBoxClicked() {
+    public void onWarnMessageDialogClicked() {
         MessageDialog.warn("Warning", LOREM_IPSUM);
 
     }
 
     @Override
-    public void onErrorMessageBoxClicked() {
+    public void onErrorMessageDialogClicked() {
         MessageDialog.error("Error", LOREM_IPSUM);
 
     }

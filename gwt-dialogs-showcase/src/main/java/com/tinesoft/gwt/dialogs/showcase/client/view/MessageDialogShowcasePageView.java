@@ -26,16 +26,16 @@ public class MessageDialogShowcasePageView extends ViewWithUiHandlers<MessageDia
     final ShowcaseResources res;
 
     @UiField
-    FlowPanel infoMessageBox;
+    FlowPanel infoMessageDialog;
 
     @UiField
-    FlowPanel askMessageBox;
+    FlowPanel askMessageDialog;
 
     @UiField
-    FlowPanel warnMessageBox;
+    FlowPanel warnMessageDialog;
 
     @UiField
-    FlowPanel errorMessageBox;
+    FlowPanel errorMessageDialog;
 
     public interface Binder extends UiBinder<Widget, MessageDialogShowcasePageView> {
     }
@@ -53,42 +53,42 @@ public class MessageDialogShowcasePageView extends ViewWithUiHandlers<MessageDia
     }
 
     private void initialize() {
-        infoMessageBox.addDomHandler(new ClickHandler() {
+        infoMessageDialog.addDomHandler(new ClickHandler() {
 
             @Override
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
-                    getUiHandlers().onInfoMessageBoxClicked();
+                    getUiHandlers().onInfoMessageDialogClicked();
                 }
             }
         }, ClickEvent.getType());
 
-        askMessageBox.addDomHandler(new ClickHandler() {
+        askMessageDialog.addDomHandler(new ClickHandler() {
 
             @Override
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
-                    getUiHandlers().onQuestionMessageBoxClicked();
+                    getUiHandlers().onQuestionMessageDialogClicked();
                 }
             }
         }, ClickEvent.getType());
 
-        warnMessageBox.addDomHandler(new ClickHandler() {
+        warnMessageDialog.addDomHandler(new ClickHandler() {
 
             @Override
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
-                    getUiHandlers().onWarnMessageBoxClicked();
+                    getUiHandlers().onWarnMessageDialogClicked();
                 }
             }
         }, ClickEvent.getType());
 
-        errorMessageBox.addDomHandler(new ClickHandler() {
+        errorMessageDialog.addDomHandler(new ClickHandler() {
 
             @Override
             public void onClick(final ClickEvent event) {
                 if (null != getUiHandlers()) {
-                    getUiHandlers().onErrorMessageBoxClicked();
+                    getUiHandlers().onErrorMessageDialogClicked();
                 }
             }
         }, ClickEvent.getType());

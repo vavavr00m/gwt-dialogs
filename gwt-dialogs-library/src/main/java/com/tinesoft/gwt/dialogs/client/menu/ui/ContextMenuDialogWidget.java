@@ -104,11 +104,14 @@ public class ContextMenuDialogWidget extends Composite implements MenuItemClickH
         pTarget.add(target);
     }
 
+    /**
+     * Hides the menu dialog.
+     */
     public void hide() {
 
         final Element menuElement = pFocusMenuContainer.getElement();
-
-        final int left = pTarget.getAbsoluteLeft();
+        final int left = pTarget.getWidget(0).getElement().getAbsoluteLeft()
+                         - pTarget.getWidget(0).getElement().getOffsetLeft();
 
         menuElement.getStyle().setLeft(left, Unit.PX);
 
@@ -117,7 +120,7 @@ public class ContextMenuDialogWidget extends Composite implements MenuItemClickH
             @Override
             protected void onComplete() {
                 super.onComplete();
-                pMenuContainer.setVisible(false);
+                pFocusMenuContainer.setVisible(false);
                 menuElement.getStyle().setLeft(left - 40, Unit.PX);
             }
 
@@ -134,6 +137,12 @@ public class ContextMenuDialogWidget extends Composite implements MenuItemClickH
 
     private void initialize() {
         initMenuDialogStyle();
+
+    }
+
+    @Override
+    public void onLoad() {
+        super.onLoad();
         // we initially hide the context menu dialog
         hide();
     }
@@ -209,15 +218,23 @@ public class ContextMenuDialogWidget extends Composite implements MenuItemClickH
         }
     }
 
+    /**
+     * Shows the menu dialog.
+     */
     public void show() {
 
-        final Element menuElement = pFocusMenuContainer.getElement();
+        // if the menu is already visible, we return immediately
+        if (pFocusMenuContainer.isVisible()) {
+            return;
+        }
 
-        final int left = pTarget.getAbsoluteLeft();
+        final Element menuElement = pFocusMenuContainer.getElement();
+        final int left = pTarget.getWidget(0).getElement().getAbsoluteLeft()
+                         - pTarget.getWidget(0).getElement().getOffsetLeft();
 
         menuElement.getStyle().setLeft(left - 40, Unit.PX);
 
-        pMenuContainer.setVisible(true);
+        pFocusMenuContainer.setVisible(true);
         final Animation fade = new Animation() {
 
             @Override

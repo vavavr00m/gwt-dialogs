@@ -11,16 +11,16 @@
 
 	<g:FlowPanel>
 		<g:HTMLPanel>
-			<h1>MesssageBox Showcase</h1>
+			<h1>MessageDialog Showcase</h1>
 		</g:HTMLPanel>
 		<g:FlowPanel styleName="{res.css.clear}">
 			<g:FlowPanel styleName="{res.css.left}">
-				<g:FlowPanel ui:field="infoMessageBox" styleName="{res.css.container}">
+				<g:FlowPanel ui:field="infoMessageDialog" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Image resource="{res.infoIcon}"></g:Image>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
-						<g:Label styleName="{res.css.title}">Information MessageBox</g:Label>
+						<g:Label styleName="{res.css.title}">Information MessageDialog</g:Label>
 						<g:Label styleName="{res.css.content}">Click here to show an information dialog box.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
@@ -28,12 +28,12 @@
 			</g:FlowPanel>
 
 			<g:FlowPanel styleName="{res.css.left}">
-				<g:FlowPanel ui:field="askMessageBox" styleName="{res.css.container}">
+				<g:FlowPanel ui:field="askMessageDialog" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Image resource="{res.askIcon}"></g:Image>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
-						<g:Label styleName="{res.css.title}">Question MessageBox</g:Label>
+						<g:Label styleName="{res.css.title}">Question MessageDialog</g:Label>
 						<g:Label styleName="{res.css.content}">Click here to show a question dialog box.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
@@ -42,12 +42,12 @@
 		</g:FlowPanel>
 		<g:FlowPanel styleName="{res.css.clear}">
 			<g:FlowPanel styleName="{res.css.left}">
-				<g:FlowPanel ui:field="warnMessageBox" styleName="{res.css.container}">
+				<g:FlowPanel ui:field="warnMessageDialog" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Image resource="{res.warnIcon}"></g:Image>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
-						<g:Label styleName="{res.css.title}">Warning MessageBox</g:Label>
+						<g:Label styleName="{res.css.title}">Warning MessageDialog</g:Label>
 						<g:Label styleName="{res.css.content}">Click here to show a warning dialog box.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
@@ -55,12 +55,12 @@
 			</g:FlowPanel>
 
 			<g:FlowPanel styleName="{res.css.left}">
-				<g:FlowPanel ui:field="errorMessageBox" styleName="{res.css.container}">
+				<g:FlowPanel ui:field="errorMessageDialog" styleName="{res.css.container}">
 					<g:FlowPanel styleName="{res.css.left}">
 						<g:Image resource="{res.errorIcon}"></g:Image>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.left}">
-						<g:Label styleName="{res.css.title}">Error MessageBox</g:Label>
+						<g:Label styleName="{res.css.title}">Error MessageDialog</g:Label>
 						<g:Label styleName="{res.css.content}">Click here to show an error dialog box.</g:Label>
 					</g:FlowPanel>
 					<g:FlowPanel styleName="{res.css.clear}"></g:FlowPanel>
