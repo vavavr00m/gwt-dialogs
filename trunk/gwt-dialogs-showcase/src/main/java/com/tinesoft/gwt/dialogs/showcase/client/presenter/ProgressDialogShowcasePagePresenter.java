@@ -1,6 +1,7 @@
 
 package com.tinesoft.gwt.dialogs.showcase.client.presenter;
 
+import com.google.gwt.user.client.Timer;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.HasUiHandlers;
@@ -17,6 +18,8 @@ import com.tinesoft.gwt.dialogs.showcase.client.handler.ProgressDialogShowcaseUi
 import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 
 public class ProgressDialogShowcasePagePresenter extends Presenter<ProgressDialogShowcasePagePresenter.MyView, ProgressDialogShowcasePagePresenter.MyProxy> implements ProgressDialogShowcaseUiHandlers {
+
+    private Timer timer;
 
     public interface MyView extends View, HasUiHandlers<ProgressDialogShowcaseUiHandlers> {
     }
@@ -49,8 +52,21 @@ public class ProgressDialogShowcasePagePresenter extends Presenter<ProgressDialo
 
                                 @Override
                                 public void onCancelButtonClicked() {
-
+                                    ProgressDialog.dismiss();
                                 }
                             });
+
+        // automatically dismiss the progress dialog after 3 seconds
+        timer = new Timer() {
+
+            @Override
+            public void run() {
+                ProgressDialog.dismiss();
+                timer.cancel();
+            }
+
+        };
+
+        timer.schedule(3000);
     }
 }
