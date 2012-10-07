@@ -18,11 +18,13 @@ public final class NameTokens {
      */
     public static final String home = "!home";
 
-    public static final String messagebox = "!messagebox";
+    public static final String messagedialog = "!messagedialog";
 
     public static final String colordialog = "!colordialog";
 
     public static final String menudialog = "!menudialog";
+
+    public static final String progressdialog = "progressdialog";
 
     /**
      * Hide utility class constructor.
@@ -38,7 +40,7 @@ public final class NameTokens {
     }
 
     public static String getMessagebox() {
-        return messagebox;
+        return messagedialog;
     }
 
     public static String getColordialog() {
@@ -47,5 +49,9 @@ public final class NameTokens {
 
     public static String getMenudialog() {
         return menudialog;
+    }
+
+    public static String getProgressdialog() {
+        return progressdialog;
     }
 }

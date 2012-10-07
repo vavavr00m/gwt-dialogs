@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.tinesoft.gwt-dialogs</groupId>
+		<groupId>com.tinesoft</groupId>
 		<artifactId>gwt-dialogs</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

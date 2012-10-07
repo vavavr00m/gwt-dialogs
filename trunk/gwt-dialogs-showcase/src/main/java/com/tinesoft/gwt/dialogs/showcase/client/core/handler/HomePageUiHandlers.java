@@ -25,4 +25,9 @@ public interface HomePageUiHandlers extends UiHandlers {
      */
     void onContextMenuDialogShowcaseClicked();
 
+    /**
+     * Fired on 'ProgressDialog' showcase click.
+     */
+    void onProgressDialogShowcaseClicked();
+
 }

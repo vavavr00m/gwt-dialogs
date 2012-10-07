@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.tinesoft.gwt-dialogs</groupId>
+		<groupId>com.tinesoft</groupId>
 		<artifactId>gwt-dialogs</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -490,7 +490,7 @@ filesCopiedToWebInfLib=
 
         <!-- DEVELOPMENT MODE -->
         <profile>
-            <id>env-dev</id>
+            <id>dev</id>
             <activation>
                 <property>
                     <name>env</name>
@@ -506,7 +506,7 @@ filesCopiedToWebInfLib=
         
         <!-- PRODUCTION MODE -->
         <profile>
-            <id>env-prod</id>
+            <id>prod</id>
             <activation>
                 <property>
                     <name>env</name>

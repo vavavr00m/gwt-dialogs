@@ -13,20 +13,20 @@ public interface MessageDialogShowcaseUiHandlers extends UiHandlers {
     /**
      * Fired on 'Info MessageDialog' item click.
      */
-    void onInfoMessageBoxClicked();
+    void onInfoMessageDialogClicked();
 
     /**
      * Fired on 'Question MessageDialog' item click.
      */
-    void onQuestionMessageBoxClicked();
+    void onQuestionMessageDialogClicked();
 
     /**
      * Fired on 'Warning MessageDialog' item click.
      */
-    void onWarnMessageBoxClicked();
+    void onWarnMessageDialogClicked();
 
     /**
      * Fired on 'Error MessageDialog' item click.
      */
-    void onErrorMessageBoxClicked();
+    void onErrorMessageDialogClicked();
 }

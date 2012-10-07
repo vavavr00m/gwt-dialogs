@@ -75,7 +75,7 @@ public interface ShowcaseResources extends ClientBundle {
      * 
      * @return info-question-warning-error image bundle
      */
-    @Source("images/messageboxes.png")
+    @Source("images/messagedialog.png")
     ImageResource messageboxesIcon();
 
     /**
@@ -91,6 +91,13 @@ public interface ShowcaseResources extends ClientBundle {
      */
     @Source("images/menudialog.png")
     ImageResource menuDialogIcon();
+
+    /**
+     * 
+     * @return progress dialog image bundle
+     */
+    @Source("images/progressdialog.png")
+    ImageResource progressDialogIcon();
 
     /**
      * 

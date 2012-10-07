@@ -46,7 +46,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
 
     @Override
     public void onMessageBoxShowcaseClicked() {
-        placeManager.revealPlace(new PlaceRequest(NameTokens.messagebox));
+        placeManager.revealPlace(new PlaceRequest(NameTokens.messagedialog));
 
     }
 
@@ -59,6 +59,12 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     @Override
     public void onContextMenuDialogShowcaseClicked() {
         placeManager.revealPlace(new PlaceRequest(NameTokens.menudialog));
+
+    }
+
+    @Override
+    public void onProgressDialogShowcaseClicked() {
+        placeManager.revealPlace(new PlaceRequest(NameTokens.progressdialog));
 
     }
 }

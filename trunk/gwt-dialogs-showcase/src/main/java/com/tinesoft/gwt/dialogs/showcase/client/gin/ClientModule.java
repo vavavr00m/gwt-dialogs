@@ -22,7 +22,9 @@ import com.tinesoft.gwt.dialogs.showcase.client.presenter.MessageDialogShowcaseP
 import com.tinesoft.gwt.dialogs.showcase.client.view.ColorDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.client.view.ContextMenuDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.client.view.MessageDialogShowcasePageView;
+import com.tinesoft.gwt.dialogs.showcase.client.view.ProgressDialogShowcasePageView;
 import com.tinesoft.gwt.dialogs.showcase.shared.Config;
+import com.tinesoft.gwt.dialogs.showcase.client.presenter.ProgressDialogShowcasePagePresenter;
 
 /**
  * Client GIN-jector module.
@@ -73,5 +75,10 @@ public class ClientModule extends AbstractPresenterModule {
                       ContextMenuDialogShowcasePagePresenter.MyView.class,
                       ContextMenuDialogShowcasePageView.class,
                       ContextMenuDialogShowcasePagePresenter.MyProxy.class);
+
+        bindPresenter(ProgressDialogShowcasePagePresenter.class,
+                      ProgressDialogShowcasePagePresenter.MyView.class,
+                      ProgressDialogShowcasePageView.class,
+                      ProgressDialogShowcasePagePresenter.MyProxy.class);
     }
 }

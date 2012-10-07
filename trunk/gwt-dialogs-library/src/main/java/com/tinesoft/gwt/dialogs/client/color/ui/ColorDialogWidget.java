@@ -158,6 +158,9 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         return resources;
     }
 
+    /**
+     * Hides the color dialog.
+     */
     public void hide() {
 
         final Animation fade = new Animation() {
@@ -354,11 +357,14 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
 
     }
 
+    /**
+     * Shows the color dialog.
+     */
     public void show() {
 
         RootPanel.get().add(this);
 
-        getElement().getStyle().setOpacity(0);
+        this.getElement().getStyle().setOpacity(0);
         this.setVisible(true);
         final Animation fade = new Animation() {
 
