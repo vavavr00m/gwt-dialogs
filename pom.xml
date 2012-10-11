@@ -616,7 +616,7 @@
 	<!-- Profiles -->
 	<!-- ====================== -->
     <profiles>
-        <profile>
+        <!--<profile>
             <id>release</id>
             <activation>
                 <property>
@@ -686,7 +686,7 @@
                     </plugins>
                 </pluginManagement>
             </build>
-        </profile>
+        </profile>-->
     </profiles>
 	<!-- ====================== -->
 	<!-- Reporting Management -->
