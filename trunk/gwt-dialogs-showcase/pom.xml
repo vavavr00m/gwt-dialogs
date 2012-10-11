@@ -500,12 +500,6 @@ filesCopiedToWebInfLib=
         <!-- PRODUCTION MODE -->
         <profile>
             <id>prod</id>
-            <activation>
-                <property>
-                    <name>performRelease</name><!--default activated profile on release-->
-                    <value>true</value>
-                </property>
-            </activation>
             <properties>
 				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppPROD</gwt.module>
                 <gwt.style>OBFUSCATED</gwt.style>
