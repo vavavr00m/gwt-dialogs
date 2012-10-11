@@ -10,7 +10,7 @@
 
 	<groupId>com.tinesoft</groupId>
 	<artifactId>gwt-dialogs</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<!-- ============== -->
@@ -725,9 +725,9 @@
 	<!-- Source Control Management -->
 	<!-- =========================== -->
 	<scm>
-		<connection>scm:svn:https://gwt-dialogs.googlecode.com/svn/tags/gwt-dialogs-1.0.0</connection>
-		<developerConnection>scm:svn:https://gwt-dialogs.googlecode.com/svn/tags/gwt-dialogs-1.0.0</developerConnection>
-		<url>https://gwt-dialogs.googlecode.com/svn/tags/gwt-dialogs-1.0.0</url>
+		<connection>scm:svn:https://gwt-dialogs.googlecode.com/svn/trunk/</connection>
+		<developerConnection>scm:svn:https://gwt-dialogs.googlecode.com/svn/trunk/</developerConnection>
+		<url>https://gwt-dialogs.googlecode.com/svn/trunk</url>
 	</scm>
 
 	<!-- ========================= -->
