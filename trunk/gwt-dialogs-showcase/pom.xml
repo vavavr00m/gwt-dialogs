@@ -516,6 +516,8 @@ filesCopiedToWebInfLib=
 		<profile>
 			<id>continous-integration</id>
 			<properties>
+				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppDEV</gwt.module>
+                <gwt.style>PRETTY</gwt.style>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/showcase/ContinousIntegrationTestSuite.java</root-test-suite.junit>
 			</properties>
 		</profile>
@@ -524,6 +526,8 @@ filesCopiedToWebInfLib=
 		<profile>
 			<id>nightly-build</id>
 			<properties>
+				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppDEV</gwt.module>
+                <gwt.style>PRETTY</gwt.style>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/showcase/NightlyBuildTestSuite.java</root-test-suite.junit>
 			</properties>
 		</profile>
