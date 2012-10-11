@@ -491,12 +491,6 @@ filesCopiedToWebInfLib=
         <!-- DEVELOPMENT MODE -->
         <profile>
             <id>dev</id>
-            <activation>
-                <property>
-                    <name>!dev-skip</name><!--default activated profile-->
-                </property>
-            </activation>
-
             <properties>	
 				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppDEV</gwt.module>
                 <gwt.style>PRETTY</gwt.style>
