@@ -147,13 +147,6 @@
 		<!-- HUDSON : Continous Integration -->
 		<profile>
 			<id>continous-integration</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>CI</value>
-				</property>
-			</activation>
-
 			<properties>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/ContinousIntegrationTestSuite.java</root-test-suite.junit>
 			</properties>
@@ -162,13 +155,6 @@
 		<!-- HUDSON : Nightly Build -->
 		<profile>
 			<id>nightly-build</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>NB</value>
-				</property>
-			</activation>
-
 			<properties>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/NightlyBuildTestSuite.java</root-test-suite.junit>
 			</properties>

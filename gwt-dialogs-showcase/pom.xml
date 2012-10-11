@@ -493,8 +493,7 @@ filesCopiedToWebInfLib=
             <id>dev</id>
             <activation>
                 <property>
-                    <name>env</name>
-                    <value>dev</value>
+                    <name>!dev-skip</name><!--default activated profile-->
                 </property>
             </activation>
 
@@ -509,11 +508,10 @@ filesCopiedToWebInfLib=
             <id>prod</id>
             <activation>
                 <property>
-                    <name>env</name>
-                    <value>prod</value>
+                    <name>performRelease</name><!--default activated profile on release-->
+                    <value>true</value>
                 </property>
             </activation>
-
             <properties>
 				<gwt.module>com.tinesoft.gwt.dialogs.showcase.ShowcaseAppPROD</gwt.module>
                 <gwt.style>OBFUSCATED</gwt.style>
@@ -523,13 +521,6 @@ filesCopiedToWebInfLib=
 		<!-- HUDSON : Continous Integration -->
 		<profile>
 			<id>continous-integration</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>CI</value>
-				</property>
-			</activation>
-
 			<properties>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/showcase/ContinousIntegrationTestSuite.java</root-test-suite.junit>
 			</properties>
@@ -538,13 +529,6 @@ filesCopiedToWebInfLib=
 		<!-- HUDSON : Nightly Build -->
 		<profile>
 			<id>nightly-build</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>NB</value>
-				</property>
-			</activation>
-
 			<properties>
 				<root-test-suite.junit>com/tinesoft/gwt/dialogs/showcase/NightlyBuildTestSuite.java</root-test-suite.junit>
 			</properties>
