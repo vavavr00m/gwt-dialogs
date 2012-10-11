@@ -1,0 +1,19 @@
+.gwtd-color-huePicker
+{
+	width:26px;
+	height:180px;
+	margin-left: 5px;
+}
+
+.gwtd-color-slPicker
+{
+	width:180px;
+	height:180px;
+}
+
+.gwtd-color-huePicker canvas,.gwtd-color-slPicker canvas
+{
+	outline: none;
+	cursor: crosshair;
+}
+

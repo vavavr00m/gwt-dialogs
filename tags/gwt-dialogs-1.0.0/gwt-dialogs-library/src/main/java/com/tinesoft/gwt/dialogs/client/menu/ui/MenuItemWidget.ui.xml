@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with
+	type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources"
+	field="resources"></ui:with>
+		
+	<g:FlowPanel ui:field="pMenuItem" addStyleNames="{resources.css.gwtdMenuItem}">
+		<g:FlowPanel ui:field="pIcon" addStyleNames="{resources.css.gwtdMenuItemIcon} {resources.css.left}"></g:FlowPanel>
+		<g:FlowPanel ui:field="pText" addStyleNames="{resources.css.gwtdMenuItemText} {resources.css.left}"></g:FlowPanel>
+		<g:FlowPanel styleName="{resources.css.clear}"/>
+	</g:FlowPanel>
+</ui:UiBinder> 

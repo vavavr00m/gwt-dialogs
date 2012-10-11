@@ -1,0 +1,92 @@
+.gwtd-menu {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	background-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #BBB #BBB #A8A8A8;
+	border-image: initial;
+	padding: 4px;
+	white-space: nowrap;
+	z-index: 987;
+	outline: none;
+	position: relative;
+	z-index: 99999;
+	width:200px;
+}
+
+.gwtd-menu-on-top {
+	
+}
+
+.gwtd-menu-on-bottom {
+	
+}
+
+.gwtd-menu-on-left {
+	
+}
+
+.gwtd-menu-on-right {
+	
+}
+
+.gwtd-menu-target {
+	display: inline;
+}
+
+.gwtd-menu-arrow-left {
+	border-color: transparent white;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	bottom: auto;
+	left: -7px;
+	position: absolute;
+	top: 21px;
+	width: 0;
+}
+
+.gwtd-menu-item {
+	color: #222;
+	cursor: pointer;
+	display: block;
+	font-size: 13px;
+	line-height: 32px;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.gwtd-menu-item:hover {
+	background-color: #F1F1F1;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.gwtd-menu-item-icon {
+	width: 32px;
+	height: 32px;
+	padding: 2px;
+}
+
+.gwtd-menu-item-text {
+	color: #36C;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.gwtd-menu-separator {
+	background-color: #F0F0F0;
+	height: 1px;
+	margin: 4px 0;
+}

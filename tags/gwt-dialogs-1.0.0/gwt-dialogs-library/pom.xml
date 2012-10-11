@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- @author Tine Kondo<kondotine@gmail.com> -->
+	<!-- @version $Id: pom.xml 3853 2012-02-03 13:13:05Z kondotine $ -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tinesoft</groupId>
+		<artifactId>gwt-dialogs</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>gwt-dialogs-library</artifactId>
+	<packaging>jar</packaging>
+
+	<!-- ============== -->
+	<!-- Informations -->
+	<!-- ============== -->
+	<name>gwt-dialogs - Library</name>
+	<description>A set of highly customizable standard dialog boxes powered by UiBinder, CSS and Gin.</description>
+
+	<!-- ============ -->
+	<!-- Properties -->
+	<!-- ============ -->
+	<properties>
+		<target.dir>target/dev</target.dir>
+		<root-test-suite.junit>com/tinesoft/gwt/dialogs/AllTestSuite.java</root-test-suite.junit>
+	</properties>
+
+	<!-- ============== -->
+	<!-- Dependencies -->
+	<!-- ============== -->
+	<dependencies>
+		<!-- Logging -->
+		<dependency>
+			<!-- SLF4J: Simple Logging Facade for Java (abstraction for various logging 
+				frameworks). -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<!-- logback: java logging framework. -->
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<!-- JUnit: unit testing framework for the Java programming language. -->
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<!-- Jukito: The combined power of JUnit, Guice and Mockito. -->
+			<groupId>org.jukito</groupId>
+			<artifactId>jukito</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- GWT -->
+		<dependency>
+			<!-- GWT-User: client-side GWT components. -->
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<!-- GWT-Dev: dev GWT components. -->
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- GWT-Injection -->
+		<dependency>
+			<!-- GWT-Injection: automatic dependency injection to GWT client-side 
+				code (built on top of Guice). -->
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+		</dependency>
+
+		<dependency>
+		<!-- GWT-DND: Drag-and-Drop Library for Google-Web-Toolkit (GWT) -->
+		    <groupId>com.allen-sauer.gwt.dnd</groupId>
+		    <artifactId>gwt-dnd</artifactId>
+		</dependency>
+	</dependencies>
+
+	<!-- ==================== -->
+	<!-- Default Operations -->
+	<!-- ==================== -->
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.ui.xml</include>
+					<include>**/*.gwt.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- JUnit Test Suites -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<includes>
+						<!-- don't run individual tests but only test suites -->
+						<include>${root-test-suite.junit}</include>
+					</includes>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<!-- =========== -->
+	<!-- Reporting -->
+	<!-- =========== -->
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<!-- ========== -->
+	<!-- Profiles -->
+	<!-- ========== -->
+	<profiles>
+		<!-- HUDSON : Continous Integration -->
+		<profile>
+			<id>continous-integration</id>
+			<properties>
+				<root-test-suite.junit>com/tinesoft/gwt/dialogs/ContinousIntegrationTestSuite.java</root-test-suite.junit>
+			</properties>
+		</profile>
+
+		<!-- HUDSON : Nightly Build -->
+		<profile>
+			<id>nightly-build</id>
+			<properties>
+				<root-test-suite.junit>com/tinesoft/gwt/dialogs/NightlyBuildTestSuite.java</root-test-suite.junit>
+			</properties>
+		</profile>
+	</profiles>
+</project>

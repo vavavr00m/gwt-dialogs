@@ -1,0 +1,78 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with
+		type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources"
+		field="resources"></ui:with>
+	<ui:style>
+		.gwtd-menu-arrow {
+			border-color: transparent red;
+			border-style: solid;
+			border-width: 9px 9px 9px 0;
+		}
+		
+		.target {
+			max-width: 100%;
+			display: -moz-inline-stack;
+			display: inline-block;
+		}
+
+		.menuContainer {
+			display: inline-block;
+			position: absolute;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+			background-color: white;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #BBB #BBB #A8A8A8;
+			border-image: initial;
+			padding: 4px;
+			white-space: nowrap;
+			z-index: 987;
+			outline:none;
+		}
+		
+		
+		.arrow,.arrowBg {
+			margin: -10px 0 0 -10px;
+			border-width: 10px 10px 10px 0;
+			position: absolute;
+			zoom: 1;
+			line-height: 0;
+			width: 0;
+			height: 0;
+			left: 0;
+			top: 15px;
+			margin: -9px 0 0 -9px;
+			border: 9px transparent solid;
+			border-right-color: #AAA;
+			border-left: 0;
+		}
+		
+		.arrowBg {
+			margin-left: -9px;
+			margin: -10px 0 0 -10px;
+			border-width: 10px 10px 10px 0;
+			margin-left: -8px;
+			border-right-color: white;
+		}
+		
+	</ui:style>
+	<g:FlowPanel>
+		<g:FlowPanel ui:field="pTarget" styleName="{style.target}" />
+		<g:FocusPanel ui:field="pFocusMenuContainer" styleName="{style.menuContainer}">
+			<g:FlowPanel ui:field="pMenuContainer">
+				<g:FlowPanel ui:field="pArrow" styleName="{style.arrow}" />
+				<g:FlowPanel ui:field="pArrowBg" styleName="{style.arrowBg}" />
+				<g:FlowPanel ui:field="pMenu" />
+			</g:FlowPanel>
+		</g:FocusPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 
