@@ -11,9 +11,9 @@ If you use Maven to build your project (what i personally recommend) you can eas
 </dependency>
 }}}
 
-The depencency will soon be published on Maven Central. So nothing more is required.
+The depencency is published on Maven Central. So nothing more is required.
 
-But until then, and if you want to use a snapshot (= under development) version of the library, you must add the following in the *`<`repositories`>`* section of your pom.xml:
+But if you want to use a snapshot (= under development) version of the library, you must add the following in the *`<`repositories`>`* section of your pom.xml:
 {{{
 <repository>
         <id>sonatype.snapshots</id>
