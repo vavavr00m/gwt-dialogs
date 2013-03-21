@@ -1,5 +1,5 @@
+#summary Getting started with gwt-dialogs library.
 #labels Featured
-# Getting started with gwt-dialogs library.
 
 = Setup =
 
