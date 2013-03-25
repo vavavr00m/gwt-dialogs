@@ -1,0 +1,14 @@
+#summary Overview of the main components of the library.
+#labels Featured
+
+= Introduction =
+
+This page gives you a quick overview of the main components(modules) that compose the *gwt-pixlr* library.
+
+
+= Components=
+
+GWT-Pixlr offers the following components:
+  * *gwt-pixlr-client*: The client part of the library, it contains everything you need to add the Pixlr' editior view in your UI
+  * *gwt-pixlr-server*: The server side of the libary, it contains a servlet that you can extends to retrieve info about the edited image
+ * *gwt-pixlr-all*: Convenient bundle containing the two above components
