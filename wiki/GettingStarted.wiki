@@ -5,12 +5,12 @@
 
 First, you need to add the gwt-dialogs jar file to your project's build path.
 
-=== Setting your project with Eclipse (without maven) ===
+== Setting your project with Eclipse (without maven) ==
 
  # Right-click on the project node in the Package Explorer and select 'Build Path > Add External Archives...'.
  # Specify the downloaded gwt-dialogs-`<`version`>`.jar
 
-=== Setting up your project with Maven ===
+== Setting up your project with Maven ==
 If you use Maven to build you project (what i personnaly recommend) you can easily set you project with gwt-dialogs by adding the following dependency to your *pom.xml*:
 
 {{{
@@ -45,9 +45,9 @@ You will also need to download and add *gwt-dnd* (Drag Drop library). We used ve
   <inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
 }}}
 
-== Using the MessageDialog ==
+= Using the MessageDialog =
 
-Simple usage:
+*Simple usage:*
 {{{
 //Show a information message dialog
 MessageDialog.inform("Your information message.");
@@ -63,7 +63,7 @@ MessageDialog.ask("Your question message.");
 }}}
 
 
-== Using the ColorDialog ==
+= Using the ColorDialog =
 
 Simple usage:
 {{{
@@ -80,9 +80,9 @@ ColorDialog.show("Pick a color.", "#ff00ff"/*default color*/, new ColorDialogEve
 
 }}}
 
-== Using the ContextMenuDialog ==
+= Using the ContextMenuDialog =
 
-=== With UiBinder ===
+=== With uibinder ==
 *MyView.ui.xml:*
 {{{
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
