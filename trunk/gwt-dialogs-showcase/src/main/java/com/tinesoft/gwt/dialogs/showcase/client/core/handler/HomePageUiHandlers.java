@@ -6,7 +6,7 @@ import com.gwtplatform.mvp.client.UiHandlers;
 /**
  * Showcase page handler.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface HomePageUiHandlers extends UiHandlers {
 

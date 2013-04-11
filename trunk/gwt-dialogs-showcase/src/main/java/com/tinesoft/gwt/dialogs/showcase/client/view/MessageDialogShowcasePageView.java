@@ -16,7 +16,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 /**
  * Message dialog showcase page view.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class MessageDialogShowcasePageView extends ViewWithUiHandlers<MessageDialogShowcaseUiHandlers> implements MessageDialogShowcasePagePresenter.MyView {
 

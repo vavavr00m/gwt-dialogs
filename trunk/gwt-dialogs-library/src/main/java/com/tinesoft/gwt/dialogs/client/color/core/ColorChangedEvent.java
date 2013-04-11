@@ -6,7 +6,7 @@ import com.google.gwt.event.shared.GwtEvent;
 /**
  * Custom event fired by a {@link ColorChangedHandler} when its color has changed.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ColorChangedEvent extends GwtEvent<ColorChangedHandler> {
 
@@ -14,10 +14,20 @@ public class ColorChangedEvent extends GwtEvent<ColorChangedHandler> {
 
     private final String color;
 
+    /**
+     * Constructs a {@link ColorChangedEvent} with the given color.
+     * 
+     * @param color the color
+     */
     public ColorChangedEvent(String color) {
         this.color = color;
     }
 
+    /**
+     * Gets the event type associated with the {@link ColorChangedEvent} events.
+     * 
+     * @return the handler type
+     */
     public static GwtEvent.Type<ColorChangedHandler> getType() {
         if (TYPE == null) {
             TYPE = new Type<ColorChangedHandler>();
@@ -35,6 +45,11 @@ public class ColorChangedEvent extends GwtEvent<ColorChangedHandler> {
         handler.onColorChanged(this);
     }
 
+    /**
+     * Gets the color associated with this event.
+     * 
+     * @return the color associated with this event
+     */
     public String getColor() {
         return color;
     }

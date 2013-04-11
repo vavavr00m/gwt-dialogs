@@ -16,7 +16,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.util.GWTLog;
  * This view only contains custom slots and we can change their content at will.
  * </p>
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class MainPageView extends ViewImpl implements MainPagePresenter.MyView {
 

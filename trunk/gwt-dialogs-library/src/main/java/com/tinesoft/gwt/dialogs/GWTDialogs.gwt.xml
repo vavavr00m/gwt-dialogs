@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- @author Tine Kondo<kondotine@gmail.com> -->
-<!-- @version $Id: GWTDialogs.gwt.xml 3337 2011-08-08 15:37:56Z kondotine $ -->
-	
-
 <module>
 	<!-- Inherit the core Web Toolkit stuff -->
 	<inherits name="com.google.gwt.user.User" />
-
 
 	<!-- Inherit the default GWT style sheet -->
 	<!-- <inherits name="com.google.gwt.user.theme.standard.Standard" /> -->
@@ -17,7 +11,7 @@
 	<!-- Inherit UiBinder with GIN support -->
 	<inherits name="com.google.gwt.uibinder.GinUiBinder" />
 
-<!-- Inherit GWT Drag-n-Drop -->
+	<!-- Inherit GWT Drag-n-Drop -->
 	<inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
 	
 	<!-- source -->

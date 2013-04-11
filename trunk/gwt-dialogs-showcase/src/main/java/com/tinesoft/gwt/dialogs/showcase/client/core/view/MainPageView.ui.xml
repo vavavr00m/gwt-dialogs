@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- @author Tine Kondo<kondotine@gmail.com> -->
+<!-- @author Tine Kondo -->
 <!-- @version $Id: MainPageView.ui.xml 3322 2011-08-05 15:10:42Z kondotine $ -->
 
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">

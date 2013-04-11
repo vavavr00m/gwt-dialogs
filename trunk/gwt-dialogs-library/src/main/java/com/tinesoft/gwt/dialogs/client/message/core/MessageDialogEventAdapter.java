@@ -6,9 +6,9 @@ package com.tinesoft.gwt.dialogs.client.message.core;
  * {@link MessageDialogEventListener}.
  * 
  * The methods in this class are empty. This class is provided as a convenience for easily creating
- * listeners by extending this class and overriding only the methods of interest.
+ * listeners by only overriding the methods of interest.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public abstract class MessageDialogEventAdapter implements MessageDialogEventListener {
 

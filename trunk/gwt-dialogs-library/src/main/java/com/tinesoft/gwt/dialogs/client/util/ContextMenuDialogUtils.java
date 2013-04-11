@@ -7,7 +7,7 @@ import com.tinesoft.gwt.dialogs.client.menu.ui.ContextMenuDialogWidget;
 /**
  * Utility class for the {@link ContextMenuDialogWidget}.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public final class ContextMenuDialogUtils {
 

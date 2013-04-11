@@ -6,7 +6,7 @@ import com.gwtplatform.mvp.client.UiHandlers;
 /**
  * Color Dialog Showcase page ui handler.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface ColorDialogShowcaseUiHandlers extends UiHandlers {
 

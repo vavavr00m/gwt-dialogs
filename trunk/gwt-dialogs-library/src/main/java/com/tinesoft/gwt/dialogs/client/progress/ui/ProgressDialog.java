@@ -15,7 +15,7 @@ import com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources;
  * (ProgressDialogResources) GWT.create(ProgressDialogResources.class)).css().ensureInjected();
  * </pre>
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ProgressDialog {
 

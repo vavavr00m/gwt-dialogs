@@ -6,7 +6,7 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 /**
  * All types of icons that can appear in a {@link MessageDialog}.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public enum MessageDialogIcon {
 

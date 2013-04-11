@@ -29,7 +29,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.presenter.ProgressDialogShowcase
 /**
  * Client GIN-jector module.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ClientModule extends AbstractPresenterModule {
 

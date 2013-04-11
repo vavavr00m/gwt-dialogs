@@ -16,7 +16,7 @@ import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
  * (ColorDialogResources) GWT.create(ColorDialogResources.class)).css().ensureInjected();
  * </pre>
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ColorDialog {
 

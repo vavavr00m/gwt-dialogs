@@ -22,7 +22,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.presenter.ProgressDialogShowcase
  * All {@link com.gwtplatform.mvp.client.Presenter} must be registered here.
  * </p>
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {

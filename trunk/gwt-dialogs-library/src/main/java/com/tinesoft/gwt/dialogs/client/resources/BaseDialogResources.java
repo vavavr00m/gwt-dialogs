@@ -7,7 +7,7 @@ import com.google.gwt.resources.client.ImageResource;
 /**
  * Base Client bundle for the dialog boxes.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface BaseDialogResources extends ClientBundle {
 

@@ -19,7 +19,7 @@ import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickHandler;
 /**
  * A widget that represents a menu item.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class MenuItemWidget extends Composite {
 

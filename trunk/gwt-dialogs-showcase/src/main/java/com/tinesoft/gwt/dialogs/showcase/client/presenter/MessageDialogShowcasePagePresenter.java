@@ -18,7 +18,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 /**
  * Message dialog page presenter.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class MessageDialogShowcasePagePresenter extends Presenter<MessageDialogShowcasePagePresenter.MyView, MessageDialogShowcasePagePresenter.MyProxy> implements MessageDialogShowcaseUiHandlers {
 
