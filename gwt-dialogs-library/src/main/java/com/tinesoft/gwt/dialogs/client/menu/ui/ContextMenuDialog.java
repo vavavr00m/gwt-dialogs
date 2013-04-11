@@ -19,7 +19,7 @@ import com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources;
  * (ContextMenuDialogResources) GWT.create(ContextMenuDialogResources.class)).css().ensureInjected();
  * </pre>
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ContextMenuDialog {
 

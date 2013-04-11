@@ -19,7 +19,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 /**
  * Color dialog page presenter.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ColorDialogShowcasePagePresenter extends Presenter<ColorDialogShowcasePagePresenter.MyView, ColorDialogShowcasePagePresenter.MyProxy> implements ColorDialogShowcaseUiHandlers {
 

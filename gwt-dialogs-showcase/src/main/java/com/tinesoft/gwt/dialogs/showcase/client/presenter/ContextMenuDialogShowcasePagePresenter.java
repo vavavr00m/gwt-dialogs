@@ -15,7 +15,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.place.NameTokens;
 /**
  * Context menu dialog page presenter.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ContextMenuDialogShowcasePagePresenter extends Presenter<ContextMenuDialogShowcasePagePresenter.MyView, ContextMenuDialogShowcasePagePresenter.MyProxy> {
 

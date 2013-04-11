@@ -6,7 +6,7 @@ import com.gwtplatform.mvp.client.UiHandlers;
 /**
  * MessageDialog Showcase page ui handler.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface MessageDialogShowcaseUiHandlers extends UiHandlers {
 

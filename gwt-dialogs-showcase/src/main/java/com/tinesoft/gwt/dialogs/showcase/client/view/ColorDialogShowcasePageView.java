@@ -17,7 +17,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 /**
  * Color dialog showcase page view.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ColorDialogShowcasePageView extends ViewWithUiHandlers<ColorDialogShowcaseUiHandlers> implements ColorDialogShowcasePagePresenter.MyView {
 

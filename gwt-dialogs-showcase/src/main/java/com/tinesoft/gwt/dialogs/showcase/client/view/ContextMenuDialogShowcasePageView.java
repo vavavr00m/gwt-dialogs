@@ -12,7 +12,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
 /**
  * Context menu dialog showcase page view.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ContextMenuDialogShowcasePageView extends ViewImpl implements ContextMenuDialogShowcasePagePresenter.MyView {
 

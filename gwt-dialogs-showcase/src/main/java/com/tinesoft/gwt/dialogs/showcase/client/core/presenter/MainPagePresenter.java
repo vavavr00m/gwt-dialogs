@@ -21,7 +21,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.event.RevealNestedPresenter
 /**
  * Main page presenter.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class MainPagePresenter extends Presenter<MainPagePresenter.MyView, MainPagePresenter.MyProxy> {
 

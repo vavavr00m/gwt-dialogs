@@ -41,7 +41,7 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
      * Custom {@link KeyPressHandler} that prevents to enter non digit in the source box widget (any
      * instance of {@link ValueBoxBase} like TextBox, IntegerBox, TextArea).
      * 
-     * @author Tine Kondo<kondotine@gmail.com>
+     * @author Tine Kondo
      */
     class NumbersOnlyKeyPressHandler implements KeyPressHandler {
 

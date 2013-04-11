@@ -15,7 +15,7 @@ import com.tinesoft.gwt.dialogs.showcase.client.core.presenter.ErrorPagePresente
 /**
  * Error view.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public class ErrorPageView extends ViewWithUiHandlers<ErrorPageUiHandlers> implements ErrorPagePresenter.MyView {
 

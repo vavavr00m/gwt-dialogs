@@ -8,7 +8,7 @@ import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 /**
  * Client bundle for the {@link MessageDialog} css and image resources.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface ContextMenuDialogResources extends ClientBundle {
 

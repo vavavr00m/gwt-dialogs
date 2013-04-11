@@ -8,7 +8,7 @@ import com.tinesoft.gwt.dialogs.client.progress.ui.ProgressDialog;
 /**
  * Client bundle for the {@link ProgressDialog} css and image resources.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface ProgressDialogResources extends BaseDialogResources {
 

@@ -3,9 +3,9 @@ package com.tinesoft.gwt.dialogs.client.progress.core;
 
 /**
  * The listener interface for receiving "interesting" events (button clicked, dialog closed,...) on
- * a progress dialog box.
+ * a progress dialog widget.
  * 
- * @author Tine Kondo<kondotine@gmail.com>
+ * @author Tine Kondo
  */
 public interface ProgressDialogEventListener {
 
