@@ -2,6 +2,7 @@
 package com.tinesoft.gwt.dialogs.client.message.ui;
 
 import com.google.gwt.core.client.GWT;
+
 import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogButtons;
 import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogDefaultButton;
 import com.tinesoft.gwt.dialogs.client.message.core.MessageDialogEventAdapter;
@@ -11,13 +12,6 @@ import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
 
 /**
  * Displays message boxes on screen.
- * <p>
- * You must add the following code during {@code #onModuleLoad()} in order to load the styling.
- * </p>
- * 
- * <pre>
- * (MessageDialogResources) GWT.create(MessageDialogResources.class)).css().ensureInjected();
- * </pre>
  * 
  * @author Tine Kondo
  */
@@ -145,6 +139,9 @@ public class MessageDialog {
     private static MessageDialogResources resources;
 
     /**
+     * Gets the {@link MessageDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @return the resources
      */
     public static MessageDialogResources getResources() {
@@ -158,6 +155,9 @@ public class MessageDialog {
     }
 
     /**
+     * Sets the {@link MessageDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @param resources the resources to set
      */
     public static void setResources(final MessageDialogResources resources) {
@@ -217,6 +217,8 @@ public class MessageDialog {
     }
 
     /**
+     * Gets the displayed message.
+     * 
      * @return the message
      */
     public String getMessage() {
@@ -224,6 +226,8 @@ public class MessageDialog {
     }
 
     /**
+     * Gets the displayed title.
+     * 
      * @return the title
      */
     public String getTitle() {

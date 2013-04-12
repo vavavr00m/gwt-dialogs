@@ -8,7 +8,6 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -19,9 +18,17 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
+
+import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
 import com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources;
 
-public class ProgressDialogWidget extends Composite implements ClickHandler {
+/**
+ * Widget that represents a progress dialog box.
+ * 
+ * @author Tine Kondo
+ * @version $Id$
+ */
+class ProgressDialogWidget extends Composite implements ClickHandler {
 
     interface MessageBoxWidgetUiBinder extends UiBinder<Widget, ProgressDialogWidget> {
     }
@@ -66,7 +73,8 @@ public class ProgressDialogWidget extends Composite implements ClickHandler {
     @UiField
     Button cancelButton;
 
-    final ProgressDialogResources resources;
+    @UiField(provided = true)
+    ProgressDialogResources resources;
 
     private final ProgressDialog progressDialog;
 
@@ -76,7 +84,16 @@ public class ProgressDialogWidget extends Composite implements ClickHandler {
     // private PickupDragController dragController;
     // private DropController dropController;
 
-    public ProgressDialogWidget(final ProgressDialog progressDialog, final ProgressDialogResources resources) {
+    /**
+     * Constructs a new {@link ProgressDialogWidget} using the given parameters.
+     * 
+     * @param messageDialog the {@link ProgressDialog} defining the settings to use to build the
+     *            widget, like the dialog title, the displayed message, or the default selected
+     *            button
+     * @param resources the {@link MessageDialogResources} defining the css, images to use for
+     *            styling the widget
+     */
+    ProgressDialogWidget(final ProgressDialog progressDialog, final ProgressDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
         // it must be instantiated before calling 'uiBinder.createAndBindUi(this)'
         this.resources = resources;
@@ -84,18 +101,6 @@ public class ProgressDialogWidget extends Composite implements ClickHandler {
         this.progressDialog = progressDialog;
 
         initialize();
-    }
-
-    /**
-     * @return the progressDialog
-     */
-    public ProgressDialog getMessageBox() {
-        return progressDialog;
-    }
-
-    @UiFactory
-    public ProgressDialogResources getResources() {
-        return resources;
     }
 
     public void hide() {

@@ -5,9 +5,7 @@
 	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
 	ui:generateLocales='default'>
 
-	<ui:with
-		type="com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources"
-		field="resources"></ui:with>
+	<ui:with type="com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources" field="resources"/>
 
 	<g:FlowPanel ui:field="pMain">		
 		<g:FlowPanel ui:field="pBackground" addStyleNames="{resources.css.gwtdDialogBoxBg}" ></g:FlowPanel>

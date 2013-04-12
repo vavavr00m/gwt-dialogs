@@ -2,6 +2,7 @@
 package com.tinesoft.gwt.dialogs.client.resources;
 
 import com.google.gwt.resources.client.CssResource.NotStrict;
+
 import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 
 /**
@@ -25,8 +26,13 @@ public interface ColorDialogResources extends BaseDialogResources {
      * 
      * @return css bundle.
      */
-    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "ColorDialogStyle.css" })
+    @Source({ BaseStyle.DEFAULT_CSS, BaseDialogStyle.DEFAULT_CSS, DEFAULT_CSS })
     @NotStrict
     ColorDialogStyle css();
+
+    /**
+     * The path to the default CSS styles used by this resource.
+     */
+    String DEFAULT_CSS = "com/tinesoft/gwt/dialogs/client/resources/ColorDialogStyle.css";
 
 }

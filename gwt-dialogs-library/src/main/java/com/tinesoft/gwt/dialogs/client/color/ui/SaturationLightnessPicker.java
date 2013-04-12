@@ -18,12 +18,19 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedEvent;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedHandler;
 import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
 import com.tinesoft.gwt.dialogs.client.util.ColorUtils;
 
-public class SaturationLightnessPicker extends Composite {
+/**
+ * Widget that represents the color picker.
+ * 
+ * @author Tine Kondo
+ * @version $Id$
+ */
+class SaturationLightnessPicker extends Composite {
 
     interface SaturationLightnessPickerUiBinder extends UiBinder<Widget, SaturationLightnessPicker> {
     }
@@ -44,20 +51,34 @@ public class SaturationLightnessPicker extends Composite {
 
     private final static SaturationLightnessPickerUiBinder uiBinder = GWT.create(SaturationLightnessPickerUiBinder.class);
 
+    /**
+     * Constructs a new {@link SaturationLightnessPicker} using the given
+     * {@link ColorDialogResources}.
+     * 
+     * @param resources the {@link ColorDialogResources} to use for styling the widget
+     */
     public SaturationLightnessPicker(final ColorDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
         // it must be instantiated before calling 'uiBinder.createAndBindUi(this)'
         this.resources = resources;
 
         this.canvas = Canvas.createIfSupported();
+        if (canvas == null)
+            throw new IllegalArgumentException(
+                    "SaturationLightnessPicker requires HTML5's canvas. It seems you browser does not support them.");
         this.canvas.setPixelSize(180, 180);
         this.canvas.setCoordinateSpaceWidth(180);
         this.canvas.setCoordinateSpaceHeight(180);
 
         initWidget(uiBinder.createAndBindUi(this));
-
     }
 
+    /**
+     * Adds a {@link ColorChangedHandler} to the widget.
+     * 
+     * @param handler the handler
+     * @return {@link HandlerRegistration} used to remove the handler
+     */
     public HandlerRegistration addColorChangedHandler(final ColorChangedHandler handler) {
         return addHandler(handler, ColorChangedEvent.getType());
     }
@@ -102,9 +123,14 @@ public class SaturationLightnessPicker extends Composite {
 
     }
 
+    /**
+     * Gets the current value of the color displayed in the widget.
+     * 
+     * @return the color (in hexadecimal format)
+     */
     public String getColor() {
         drawGradient(false);
-        final String color = getColorAtPixel(handleX, handleY);
+        final String color = "#" + getColorAtPixel(handleX, handleY);
         drawGradient(true);
         return color;
     }
@@ -182,9 +208,9 @@ public class SaturationLightnessPicker extends Composite {
     }
 
     /**
-     * Sets the hue value of the picker.
+     * Sets the current value of the hue displayed in the widget.
      * 
-     * @param hue the new hue value to set .
+     * @param hue the new value of the hue
      */
     public void setHue(final int hue) {
         this.hue = hue;

@@ -13,6 +13,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickEvent;
 import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickHandler;
 
@@ -21,7 +22,7 @@ import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickHandler;
  * 
  * @author Tine Kondo
  */
-public class MenuItemWidget extends Composite {
+class MenuItemWidget extends Composite {
 
     private static MenuItemWidgetUiBinder uiBinder = GWT.create(MenuItemWidgetUiBinder.class);
 
@@ -75,7 +76,7 @@ public class MenuItemWidget extends Composite {
     }
 
     /**
-     * Add a {@link MenuItemClickHandler} to this menu item.
+     * Adds a {@link MenuItemClickHandler} to this menu item.
      * 
      * @param handler the handler
      * @return {@link HandlerRegistration} used to remove the handler

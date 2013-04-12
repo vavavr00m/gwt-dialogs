@@ -3,6 +3,7 @@ package com.tinesoft.gwt.dialogs.client.resources;
 
 import com.google.gwt.resources.client.CssResource.NotStrict;
 import com.google.gwt.resources.client.ImageResource;
+
 import com.tinesoft.gwt.dialogs.client.progress.ui.ProgressDialog;
 
 /**
@@ -20,7 +21,7 @@ public interface ProgressDialogResources extends BaseDialogResources {
 
     /**
      * 
-     * @return progress animated image.
+     * @return the progress animated image.
      */
     @Source("images/progress.gif")
     ImageResource progressIcon();
@@ -32,4 +33,8 @@ public interface ProgressDialogResources extends BaseDialogResources {
     @NotStrict
     ProgressDialogStyle css();
 
+    /**
+     * The path to the default CSS styles used by this resource.
+     */
+    String DEFAULT_CSS = "com/tinesoft/gwt/dialogs/client/resources/ProgressDialogStyle.css";
 }

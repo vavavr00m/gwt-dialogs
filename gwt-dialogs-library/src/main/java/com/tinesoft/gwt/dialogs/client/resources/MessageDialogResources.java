@@ -3,6 +3,7 @@ package com.tinesoft.gwt.dialogs.client.resources;
 
 import com.google.gwt.resources.client.CssResource.NotStrict;
 import com.google.gwt.resources.client.ImageResource;
+
 import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 
 /**
@@ -17,6 +18,11 @@ public interface MessageDialogResources extends BaseDialogResources {
     }
 
     /**
+     * The path to the default CSS styles used by this resource.
+     */
+    String DEFAULT_CSS = "com/tinesoft/gwt/dialogs/client/resources/MessageDialogStyle.css";
+
+    /**
      * 
      * @return question image bundle.
      */
@@ -26,7 +32,7 @@ public interface MessageDialogResources extends BaseDialogResources {
     /**
      * @return css bundle.
      */
-    @Source({ "BaseStyle.css", "BaseDialogStyle.css", "MessageDialogStyle.css" })
+    @Source({ BaseStyle.DEFAULT_CSS, BaseDialogStyle.DEFAULT_CSS, DEFAULT_CSS })
     @NotStrict
     MessageDialogStyle css();
 

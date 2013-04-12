@@ -4,6 +4,7 @@ package com.tinesoft.gwt.dialogs.client.menu.ui;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.menu.core.ContextMenuDialogEventListener;
 import com.tinesoft.gwt.dialogs.client.menu.core.ContextMenuDialogTriggerMode;
 import com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources;
@@ -24,6 +25,9 @@ import com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources;
 public class ContextMenuDialog {
 
     /**
+     * Gets the {@link ContextMenuDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @return the resources
      */
     public static ContextMenuDialogResources getResources() {
@@ -37,10 +41,15 @@ public class ContextMenuDialog {
     }
 
     /**
+     * Sets the {@link ContextMenuDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @param resources the resources to set
      */
     public static void setResources(final ContextMenuDialogResources resources) {
         ContextMenuDialog.resources = resources;
+        // we make sure that the new css style is injected
+        ContextMenuDialog.resources.css().ensureInjected();
     }
 
     private final ContextMenuDialogWidget menuDialogWidget;

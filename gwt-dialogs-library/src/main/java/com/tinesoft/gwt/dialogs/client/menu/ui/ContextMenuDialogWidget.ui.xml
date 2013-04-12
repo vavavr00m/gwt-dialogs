@@ -2,9 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-	<ui:with
-		type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources"
-		field="resources"></ui:with>
+	<ui:with type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources" field="resources"/>
 	<ui:style>
 		.gwtd-menu-arrow {
 			border-color: transparent red;

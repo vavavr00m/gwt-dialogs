@@ -4,12 +4,10 @@
 	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
 	ui:generateLocales='default' xmlns:c="urn:import:com.google.gwt.canvas.client">
 
-	<ui:with
-		type="com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources"
-		field="resources"></ui:with>
+	<ui:with type="com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources" field="resources"/>
 
 	<g:FlowPanel ui:field="pCanvas">		
-		<c:Canvas ui:field="canvas"  styleName="{resources.css.gwtdColorSlPicker}" ></c:Canvas>			
+		<c:Canvas ui:field="canvas"  styleName="{resources.css.gwtdColorSlPicker}" />			
 	</g:FlowPanel>
 
 </ui:UiBinder> 
