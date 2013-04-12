@@ -2,9 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-	<ui:with
-	type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources"
-	field="resources"></ui:with>
+	<ui:with type="com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources" field="resources"/>
 		
 	<g:FlowPanel ui:field="pMenuItem" addStyleNames="{resources.css.gwtdMenuItem}">
 		<g:FlowPanel ui:field="pIcon" addStyleNames="{resources.css.gwtdMenuItemIcon} {resources.css.left}"></g:FlowPanel>

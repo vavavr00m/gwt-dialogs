@@ -2,19 +2,14 @@
 package com.tinesoft.gwt.dialogs.client.color.ui;
 
 import com.google.gwt.core.client.GWT;
+
+import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedEvent;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorDialogEventAdapter;
 import com.tinesoft.gwt.dialogs.client.color.core.ColorDialogEventListener;
 import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
 
 /**
  * Displays a color dialog on screen.
- * <p>
- * You must add the following code during {@code #onModuleLoad()} in order to load the styling.
- * </p>
- * 
- * <pre>
- * (ColorDialogResources) GWT.create(ColorDialogResources.class)).css().ensureInjected();
- * </pre>
  * 
  * @author Tine Kondo
  */
@@ -23,6 +18,8 @@ public class ColorDialog {
     private static String color;
 
     /**
+     * Gets the {@link ColorDialogResources} defining the css, images to use for styling the widget.
+     * 
      * @return the resources
      */
     public static ColorDialogResources getResources() {
@@ -36,10 +33,14 @@ public class ColorDialog {
     }
 
     /**
+     * Sets the {@link ColorDialogResources} defining the css, images to use for styling the widget.
+     * 
      * @param resources the resources to set
      */
     public static void setResources(final ColorDialogResources resources) {
         ColorDialog.resources = resources;
+        // we make sure that the new css style is injected
+        ColorDialog.resources.css().ensureInjected();
     }
 
     /**
@@ -86,14 +87,26 @@ public class ColorDialog {
     private static ColorDialogResources resources;
 
     /**
-     * @return the color
+     * Gets the current value of the color displayed in the widget.
+     * 
+     * @return the color (in hexadecimal format with the '#')
      */
     public static String getColor() {
         return color;
     }
 
     /**
-     * @param color the color to set
+     * Sets the color displayed by the picker. The color string can be represented in 3 different
+     * modes:
+     * <ul>
+     * <li>in hexadecimal mode. Eg: #ff0000</li>
+     * <li>in RBG mode. Eg: rgb(255,0,0)</li>
+     * <li>in RBGA mode. Eg: rgba(255,0,0,a)</li>
+     * </ul>
+     * 
+     * The method fires a {@link ColorChangedEvent} with the new color (in hexadecimal) as argument.
+     * 
+     * @param color the new color to set (in hexadecimal representation with or without the '#').
      */
     public static void setColor(final String color) {
         ColorDialog.color = color;
@@ -125,6 +138,8 @@ public class ColorDialog {
     }
 
     /**
+     * Gets the displayed message.
+     * 
      * @return the message
      */
     public String getMessage() {
@@ -132,6 +147,8 @@ public class ColorDialog {
     }
 
     /**
+     * Gets the displayed title.
+     * 
      * @return the title
      */
     public String getTitle() {

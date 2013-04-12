@@ -8,7 +8,6 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -19,9 +18,16 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.resources.MessageDialogResources;
 
-public class MessageDialogWidget extends Composite implements ClickHandler {
+/**
+ * Widget that represents a dialog box to display messages.
+ * 
+ * @author Tine Kondo
+ * @version $Id$
+ */
+class MessageDialogWidget extends Composite implements ClickHandler {
 
     interface MessageBoxWidgetUiBinder extends UiBinder<Widget, MessageDialogWidget> {
     }
@@ -84,7 +90,8 @@ public class MessageDialogWidget extends Composite implements ClickHandler {
     @UiField
     Button noButton;
 
-    final MessageDialogResources resources;
+    @UiField(provided = true)
+    MessageDialogResources resources;
 
     private final MessageDialog messageDialog;
 
@@ -94,7 +101,16 @@ public class MessageDialogWidget extends Composite implements ClickHandler {
     // private PickupDragController dragController;
     // private DropController dropController;
 
-    public MessageDialogWidget(final MessageDialog messageDialog, final MessageDialogResources resources) {
+    /**
+     * Constructs a new {@link ColorDialogWidget} using the given parameters.
+     * 
+     * @param messageDialog the {@link MessageDialog} defining the settings to use to build the
+     *            widget, like the dialog title, the displayed message, or the default selected
+     *            button
+     * @param resources the {@link MessageDialogResources} defining the css, images to use for
+     *            styling the widget
+     */
+    MessageDialogWidget(final MessageDialog messageDialog, final MessageDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
         // it must be instantiated before calling 'uiBinder.createAndBindUi(this)'
         this.resources = resources;
@@ -105,17 +121,8 @@ public class MessageDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * @return the messageDialog
+     * Hides the message dialog.
      */
-    public MessageDialog getMessageBox() {
-        return messageDialog;
-    }
-
-    @UiFactory
-    public MessageDialogResources getResources() {
-        return resources;
-    }
-
     public void hide() {
 
         final Animation fade = new Animation() {
@@ -261,8 +268,8 @@ public class MessageDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according to
-     * its type.
+     * Sets the title and the message that must be displayed on the {@link MessageDialog}, according
+     * to its type.
      */
     private void initDisplayedContent() {
         if (messageDialog != null) {
@@ -503,6 +510,9 @@ public class MessageDialogWidget extends Composite implements ClickHandler {
         }
     }
 
+    /**
+     * Shows the message dialog.
+     */
     public void show() {
 
         RootPanel.get().add(this);

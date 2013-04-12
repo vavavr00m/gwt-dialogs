@@ -12,7 +12,6 @@ import com.google.gwt.event.dom.client.KeyPressHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -26,13 +25,21 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.ValueBoxBase;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.color.core.ColorChangedEvent;
 import com.tinesoft.gwt.dialogs.client.color.core.HueChangedEvent;
 import com.tinesoft.gwt.dialogs.client.message.ui.MessageDialog;
 import com.tinesoft.gwt.dialogs.client.resources.ColorDialogResources;
 import com.tinesoft.gwt.dialogs.client.util.ColorUtils;
 
-public class ColorDialogWidget extends Composite implements ClickHandler {
+/**
+ * Widget that represents a color picker, a hue picker, and text boxes to easily change each color
+ * component (red, green,blue, and hue value).
+ * 
+ * @author Tine Kondo
+ * @version $Id$
+ */
+class ColorDialogWidget extends Composite implements ClickHandler {
 
     interface ColorDialogWidgetUiBinder extends UiBinder<Widget, ColorDialogWidget> {
     }
@@ -118,7 +125,8 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     @UiField
     TextBox pickedColorIntegerBox;
 
-    final ColorDialogResources resources;
+    @UiField(provided = true)
+    ColorDialogResources resources;
 
     private final ColorDialog colorDialog;
 
@@ -128,34 +136,34 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     // private PickupDragController dragController;
     // private DropController dropController;
 
-    public ColorDialogWidget(final ColorDialog colorDialog, final ColorDialogResources resources) {
+    /**
+     * Constructs a new {@link ColorDialogWidget} using the given parameters.
+     * 
+     * @param colorDialog the {@link ColorDialog} defining the settings to use to build the widget,
+     *            like the dialog title, the displayed message, or the default selected button
+     * @param resources the {@link ColorDialogResources} defining the css, images to use for styling
+     *            the widget
+     */
+    ColorDialogWidget(final ColorDialog colorDialog, final ColorDialogResources resources) {
         // as 'resources' is annotated with @UiField(provided = true), then
         // it must be instantiated before calling 'uiBinder.createAndBindUi(this)'
         this.resources = resources;
         // same for 'huePicker' and 'slPicker'
         huePicker = new HuePicker(resources);
         slPicker = new SaturationLightnessPicker(resources);
-
-        initWidget(uiBinder.createAndBindUi(this));
         this.colorDialog = colorDialog;
 
+        initWidget(uiBinder.createAndBindUi(this));
         initialize();
     }
 
+    /**
+     * Gets the current value of the color displayed in the widget.
+     * 
+     * @return the color (in hexadecimal format with the '#')
+     */
     public String getColor() {
         return slPicker.getColor();
-    }
-
-    /**
-     * @return the colorDialog
-     */
-    public ColorDialog getColorDialog() {
-        return colorDialog;
-    }
-
-    @UiFactory
-    public ColorDialogResources getResources() {
-        return resources;
     }
 
     /**
@@ -213,19 +221,6 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
     }
 
     /**
-     * Initializes the color dialog.
-     */
-    private void initialize() {
-
-        initDisplayedContent();
-
-        initDragAndDrop();
-
-        initEventHandlers();
-
-    }
-
-    /**
      * Initializes event handlers on color integer box (for red, green, blue, and hue value).
      */
     private void initEventHandlers() {
@@ -234,9 +229,9 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         final ValueChangeHandler<Integer> colorChangedHandler = new ValueChangeHandler<Integer>() {
 
             @Override
-            public void onValueChange(ValueChangeEvent<Integer> event) {
+            public void onValueChange(final ValueChangeEvent<Integer> event) {
 
-                if (!(event.getValue() >= 0 && event.getValue() < 256)) {
+                if (!((event.getValue() >= 0) && (event.getValue() < 256))) {
                     // default valid value
                     ((IntegerBox) event.getSource()).setValue(255);
                 }
@@ -259,6 +254,19 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         greenColorIntegerBox.addKeyPressHandler(numbersOnlyHandler);
         blueColorIntegerBox.addKeyPressHandler(numbersOnlyHandler);
         hueIntegerBox.addKeyPressHandler(numbersOnlyHandler);
+
+    }
+
+    /**
+     * Initializes the color dialog.
+     */
+    private void initialize() {
+
+        initDisplayedContent();
+
+        initDragAndDrop();
+
+        initEventHandlers();
 
     }
 
@@ -348,6 +356,18 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         }
     }
 
+    /**
+     * Sets the color displayed by the picker. The color string can be represented in 3 different
+     * modes:
+     * <ul>
+     * <li>in hexadecimal mode. Eg: #ff0000</li>
+     * <li>in RBG mode. Eg: rgb(255,0,0)</li>
+     * <li>in RBGA mode. Eg: rgba(255,0,0,a)</li>
+     * </ul>
+     * 
+     * 
+     * @param color the new color to set (in hexadecimal representation with or without the '#').
+     */
     public void setColor(final String color) {
         final int[] rgb = ColorUtils.getRGB(color);
         final int[] hsl = ColorUtils.rgb2hsl(rgb);
@@ -364,7 +384,7 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
 
         RootPanel.get().add(this);
 
-        this.getElement().getStyle().setOpacity(0);
+        getElement().getStyle().setOpacity(0);
         this.setVisible(true);
         final Animation fade = new Animation() {
 
@@ -376,4 +396,5 @@ public class ColorDialogWidget extends Composite implements ClickHandler {
         fade.run(DEFAULT_FADE_IN);
         pFocusDialog.setFocus(true);
     }
+
 }

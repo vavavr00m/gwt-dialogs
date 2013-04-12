@@ -2,18 +2,12 @@
 package com.tinesoft.gwt.dialogs.client.progress.ui;
 
 import com.google.gwt.core.client.GWT;
+
 import com.tinesoft.gwt.dialogs.client.progress.core.ProgressDialogEventListener;
 import com.tinesoft.gwt.dialogs.client.resources.ProgressDialogResources;
 
 /**
  * Displays a progress dialog on screen.
- * <p>
- * You must add the following code during {@code #onModuleLoad()} in order to load the styling.
- * </p>
- * 
- * <pre>
- * (ProgressDialogResources) GWT.create(ProgressDialogResources.class)).css().ensureInjected();
- * </pre>
  * 
  * @author Tine Kondo
  */
@@ -64,6 +58,9 @@ public class ProgressDialog {
     private static ProgressDialogResources resources;
 
     /**
+     * Gets the {@link ProgressDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @return the resources
      */
     public static ProgressDialogResources getResources() {
@@ -77,6 +74,9 @@ public class ProgressDialog {
     }
 
     /**
+     * Sets the {@link ProgressDialogResources} defining the css, images to use for styling the
+     * widget.
+     * 
      * @param resources the resources to set
      */
     public static void setResources(final ProgressDialogResources resources) {
@@ -112,6 +112,8 @@ public class ProgressDialog {
     }
 
     /**
+     * Gets the displayed message.
+     * 
      * @return the message
      */
     public String getMessage() {
@@ -119,6 +121,8 @@ public class ProgressDialog {
     }
 
     /**
+     * Gets the displayed title.
+     * 
      * @return the title
      */
     public String getTitle() {

@@ -20,12 +20,19 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.FocusPanel;
 import com.google.gwt.user.client.ui.Widget;
+
 import com.tinesoft.gwt.dialogs.client.menu.core.ContextMenuDialogTriggerMode;
 import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickEvent;
 import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickHandler;
 import com.tinesoft.gwt.dialogs.client.resources.ContextMenuDialogResources;
 import com.tinesoft.gwt.dialogs.client.util.ContextMenuDialogUtils;
 
+/**
+ * Widget that represents a context menu widget.
+ * 
+ * @author Tine Kondo
+ * @version $Id$
+ */
 public class ContextMenuDialogWidget extends Composite implements MenuItemClickHandler {
 
     interface ContextMenuDialogWidgetUiBinder extends UiBinder<Widget, ContextMenuDialogWidget> {
