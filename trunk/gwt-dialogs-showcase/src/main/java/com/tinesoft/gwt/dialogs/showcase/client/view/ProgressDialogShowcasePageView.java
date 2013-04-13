@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
+
 import com.tinesoft.gwt.dialogs.showcase.client.handler.ProgressDialogShowcaseUiHandlers;
 import com.tinesoft.gwt.dialogs.showcase.client.presenter.ProgressDialogShowcasePagePresenter;
 import com.tinesoft.gwt.dialogs.showcase.client.resources.ShowcaseResources;
@@ -28,8 +29,8 @@ public class ProgressDialogShowcasePageView extends ViewWithUiHandlers<ProgressD
 
     @Inject
     public ProgressDialogShowcasePageView(final Binder binder, final ShowcaseResources resources) {
-        widget = binder.createAndBindUi(this);
         res = resources;
+        widget = binder.createAndBindUi(this);
     }
 
     @Override

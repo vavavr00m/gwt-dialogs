@@ -103,6 +103,9 @@ class ProgressDialogWidget extends Composite implements ClickHandler {
         initialize();
     }
 
+    /**
+     * Hides the progress dialog.
+     */
     public void hide() {
 
         final Animation fade = new Animation() {
@@ -233,6 +236,9 @@ class ProgressDialogWidget extends Composite implements ClickHandler {
         }
     }
 
+    /**
+     * Shows the progress dialog.
+     */
     public void show() {
 
         RootPanel.get().add(this);

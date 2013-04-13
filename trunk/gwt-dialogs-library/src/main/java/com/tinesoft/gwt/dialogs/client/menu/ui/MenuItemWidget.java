@@ -22,7 +22,7 @@ import com.tinesoft.gwt.dialogs.client.menu.core.MenuItemClickHandler;
  * 
  * @author Tine Kondo
  */
-class MenuItemWidget extends Composite {
+public class MenuItemWidget extends Composite {
 
     private static MenuItemWidgetUiBinder uiBinder = GWT.create(MenuItemWidgetUiBinder.class);
 
