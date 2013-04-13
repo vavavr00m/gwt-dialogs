@@ -93,6 +93,7 @@ public class ContextMenuDialog {
     }
 
     /**
+     * 
      * @return the target
      */
     public Widget getTarget() {

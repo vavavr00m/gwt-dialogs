@@ -8,9 +8,6 @@
 	<inherits name="com.google.gwt.user.theme.chrome.Chrome" />
 	<!-- <inherits name="com.google.gwt.user.theme.dark.Dark" /> -->
 
-	<!-- Inherit UiBinder with GIN support -->
-	<inherits name="com.google.gwt.uibinder.GinUiBinder" />
-
 	<!-- Inherit GWT Drag-n-Drop -->
 	<inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
 	
